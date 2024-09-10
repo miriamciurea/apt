@@ -63,7 +63,7 @@ body {
 
 .learnMore {
   width: 10rem;
-  /* Reduced width */
+
   height: auto;
 }
 
@@ -73,12 +73,12 @@ body {
   display: block;
   margin: 0;
   width: 2rem;
-  /* Reduced width */
+
   height: 2rem;
-  /* Reduced height */
+
   background: var(--blue);
   border-radius: 1rem;
-  /* Adjusted border radius */
+
 }
 
 .icon {
@@ -92,11 +92,8 @@ body {
 
 .arrow {
   left: 0.5rem;
-  /* Adjusted position */
   width: 0.875rem;
-  /* Reduced width */
   height: 0.1rem;
-  /* Reduced height */
   background: none;
 }
 
@@ -104,17 +101,11 @@ body {
   position: absolute;
   content: '';
   top: -0.2rem;
-  /* Adjusted position */
   right: 0.05rem;
-  /* Adjusted position */
   width: 0.5rem;
-  /* Reduced size */
   height: 0.5rem;
-  /* Reduced size */
   border-top: 0.1rem solid #fff;
-  /* Adjusted border size */
   border-right: 0.1rem solid #fff;
-  /* Adjusted border size */
   transform: rotate(45deg);
 }
 
@@ -126,13 +117,10 @@ body {
   right: 0;
   bottom: 0;
   padding: 0.5rem 0;
-  /* Adjusted padding */
   margin: 0 0 0 1.25rem;
-  /* Adjusted margin */
   color: var(--blue);
   font-weight: 700;
   line-height: 1.2;
-  /* Adjusted line-height */
   text-align: center;
   text-transform: uppercase;
 }
