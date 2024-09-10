@@ -11,28 +11,3 @@ app.use('/', (req: Request, res: Response, next: NextFunction ) => {
 
 // Start server
 app.listen(port, () => console.log(`Server is listening on port ${port}!`))
-// // app setup
-// const express = require('express')
-// const app = express();
-
-// // db
-// const connectDB = require('./db/connect')
-// require('dotenv').config();
-
-
-// const port = 5001
-
-// // app.listen(PORT, () => console.log(`server started at ${PORT}`));
-
-// const start = async () => {
-//   try {
-//     await connectDB(process.env.MONGO_URI);
-//     app.listen(port, console.log('server is listening'));
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// start()
-
-//     // "start": "nodemon backend/server.js"
