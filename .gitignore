@@ -1,1 +1,23 @@
-/.env
+# Ignore node_modules (dependencies installed locally)
+node_modules/
+
+# Ignore environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS or editor-specific files
+# .DS_Store
+# Thumbs.db
+# .vscode/
+# .idea/
+# *.swp
+
+# Ignore compiled TypeScript files (if using TypeScript)
+dist/
+
+# Ignore package-lock.json if you're using yarn
+package-lock.json
