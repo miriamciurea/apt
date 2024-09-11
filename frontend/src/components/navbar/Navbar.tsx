@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './Navbar.module.css';
-import newlogo from '../../assets/newlogo.png';
+import logo from '../../assets/logo.png';
 
 const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <a href="/" className={styles.logoLink}>
-        <img src={newlogo} alt="logo" className={styles.logo} />
+        <img src={logo} alt="logo" className={styles.logo} />
       </a>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
