@@ -4,6 +4,7 @@ import React from 'react'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import Hero from './components/navbar/Hero'
+import Cta from './components/cta/Cta'
 import Review from './components/reviews/Review'
 
 const App: React.FC = () => {
@@ -11,8 +12,10 @@ const App: React.FC = () => {
     <>
       <Navbar />
       <Hero />
-      <div className="container"></div>
-      <Review />
+      <div className="container">
+        <Cta />
+        <Review />
+      </div>
       <Footer />
     </>
   );

@@ -1,0 +1,24 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--white);
+  height: 40vh;
+  font-family: var(--principal);
+}
+
+.title {
+  padding: 20px 0px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.subtitle {
+  margin-top: -50px;
+}
