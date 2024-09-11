@@ -122,6 +122,11 @@
 .navLink:hover .buttonText {
   color: var(--white);
 }
+
+.menuIcon {
+  display: none
+}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .navList {
