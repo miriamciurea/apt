@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import logo from '../../assets/logo.png';
 
 const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className={styles.navbar}>
       <a href="/" className={styles.logoLink}>
         <img src={logo} alt="logo" className={styles.logo} />
       </a>
-      <ul className={styles.navList}>
+      <div className={styles.menuIcon} onClick={toggleMenu}>
+        <i className="fas fa-bars"></i>
+      </div>
+      <ul className={`${styles.navList} ${isMenuOpen ? styles.showMenu : ''}`}>
         <li className={styles.navItem}>
           <a href="/about" className={`${styles.navLink} ${styles.learnMore}`}>
             <span className={styles.circle} aria-hidden="true">
