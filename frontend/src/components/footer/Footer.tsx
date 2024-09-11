@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Footer.module.css';
-// import { byPrefixAndName } from '@awesome.me/kit-KIT_CODE/icons'
+import newlogo from '../../assets/newlogo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -8,9 +8,7 @@ const Footer: React.FC = () => {
       <footer>
 
         <div className={styles.logo}>
-          <span className="material-symbols-outlined">
-            location_on
-          </span>
+          <img src={newlogo} alt="logo" />
         </div>
 
         <div className={styles.about}>
@@ -21,7 +19,7 @@ const Footer: React.FC = () => {
             APT is a construction agency that specializes in rail, civil and optic fibre, located in Midlands, United Kingdom.
           </div>
           <div className={styles.copyright}>
-            copyright
+            Copyright
           </div>
         </div>
 
@@ -80,10 +78,17 @@ const Footer: React.FC = () => {
 
         <div className={styles.pages}>
 
+          <div className={styles.title}>
+              Explore
+          </div>
+
+          <div className={styles.pages_list}>
             <a href="/">About Us</a>
             <a href="/">Projects</a>
             <a href="/">Careers</a>
             <a href="/">Get In Touch</a>
+          </div>
+
         </div>
 
       </footer>
