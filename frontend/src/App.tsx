@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import Hero from './components/navbar/Hero'
 import Cta from './components/cta/Cta'
+import Review from './components/reviews/Review'
 
 const App: React.FC = () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <Hero />
       <div className="container">
         <Cta />
+        <Review />
       </div>
       <Footer />
     </>

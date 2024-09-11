@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: space-around;
   background: var(--bg);
-  padding: 10px 20px;
-  padding-right: 30px;
+  padding: 10px 0px;
+  background-color: #ffffff;
 }
 
 .logoLink {
