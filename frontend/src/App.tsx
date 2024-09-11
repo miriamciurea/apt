@@ -4,13 +4,16 @@ import React from 'react'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import Hero from './components/navbar/Hero'
+import Cta from './components/cta/Cta'
 
 const App: React.FC = () => {
   return (
     <>
       <Navbar />
       <Hero />
-      <div className="container"></div>
+      <div className="container">
+        <Cta />
+      </div>
       <Footer />
     </>
   );
