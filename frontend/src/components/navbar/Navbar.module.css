@@ -1,31 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Mukta:700');
 
-:root {
-  --bg: #f3f8fa;
-  --white: #fff;
-  --blue: #0a0a0a;
-}
-
-body {
-  font-family: 'Mukta', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
   background: var(--bg);
   padding: 10px 20px;
   padding-right: 30px;
-  background-color: #ffffff;
 }
 
 .logoLink {
