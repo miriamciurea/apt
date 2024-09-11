@@ -52,6 +52,43 @@ footer {
   align-items: baseline;
 }
 
-.logo {
+.logo img{
   width: 200px;
+}
+
+@media (max-width: 768px) {
+   footer{
+
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-template-rows: auto; /* Let rows size automatically */
+    grid-template-areas:
+      "logo about"
+      "pages git"; /* Define the order of items */
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .pages {
+    grid-area: pages;
+  }
+
+  .git {
+    grid-area: git;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo img {
+    width: 100px;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
 }
