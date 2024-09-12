@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
-import logo from '../../assets/logo.png';
+import newlogo from '../../assets/newlogo.png';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <a href="/" className={styles.logoLink}>
-        <img src={logo} alt="logo" className={styles.logo} />
+        <img src={newlogo} alt="logo" className={styles.logo} />
       </a>
       <div className={styles.menuIcon} onClick={toggleMenu}>
         <i className="fas fa-bars"></i>
