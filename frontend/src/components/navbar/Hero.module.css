@@ -93,6 +93,7 @@
   .hero {
     height: auto;
     padding: 20px;
+    width: auto;
   }
 
   .content {

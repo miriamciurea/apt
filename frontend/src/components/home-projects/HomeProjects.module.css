@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 20px 0px;
+  background-color: var(--white);
+
+}
+.projects {
+  display: flex;
+  overflow: scroll;
+  gap: 30px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  position: relative;
+  height: 70vh;
+  }
+
+.projects::-webkit-scrollbar {
+display: none;
+}
+
+.title {
+  font-family: var(--principal);
+  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+.project:last-child {
+  margin-right: 20px;
+}
+
+.project:first-child {
+  margin-left: 20px;
+}
+
+.projects::-webkit-scrollbar {
+  display: none;
+}
+
+.project {
+  position: relative;
+  display: inline-block;
+  min-width: 300px;
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: end; */
+}
+
+.project img {
+  max-height: 80vh;
+  max-width: 100%;
+  position: relative;
+}
