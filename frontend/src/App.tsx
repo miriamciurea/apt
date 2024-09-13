@@ -7,6 +7,7 @@ import Hero from "./components/navbar/Hero";
 import Cta from "./components/cta/Cta";
 import Reviews from "./components/reviews/Reviews";
 import HomeProjects from "./components/home-projects/HomeProjects";
+import Slider from "./components/slider-image/Slider";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Hero />
       <div className="container">
         <HomeProjects />
+        <Slider />
         <Cta />
         <Reviews />
       </div>
