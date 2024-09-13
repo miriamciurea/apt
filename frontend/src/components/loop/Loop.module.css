@@ -1,0 +1,36 @@
+/* SlidingText.module.css */
+.container {
+  position: relative;
+  overflow: hidden;
+  /* Hide text when it's outside of the container */
+  width: 100%;
+  /* Full width of the parent container */
+  height: 100px;
+  /* Adjust height as needed */
+}
+
+.slidingText {
+  position: absolute;
+  white-space: nowrap;
+  /* Prevent text from wrapping */
+  font-size: 56px;
+  /* Adjust size as needed */
+  font-family: 'Orbitron', sans-serif;
+  color: black;
+  /* Text color */
+  animation: slide 20s linear infinite;
+  /* Apply animation */
+  padding: 20px 0;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+    /* Start position, off-screen to the right */
+  }
+
+  100% {
+    transform: translateX(-100%);
+    /* End position, off-screen to the left */
+  }
+}
