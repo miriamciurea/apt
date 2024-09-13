@@ -8,6 +8,7 @@ import Cta from "./components/cta/Cta";
 import Reviews from "./components/reviews/Reviews";
 import HomeProjects from "./components/home-projects/HomeProjects";
 import Slider from "./components/slider-image/Slider";
+import Loop from "./components/loop/Loop";
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <Hero />
       <div className="container">
         <HomeProjects />
+        <Loop />
         <Slider />
         <Reviews />
         <Cta />
