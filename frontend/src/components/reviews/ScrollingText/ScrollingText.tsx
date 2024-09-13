@@ -22,7 +22,7 @@ const ScrollingText = () => {
   const centerOfText = (textRef.current ? textRef.current.offsetWidth : 0) / 2;
 
   const textPosition = Math.min(
-    scrollPosition - 500,
+    scrollPosition - 1000,
     centerPosition - centerOfText - 15
   );
 
