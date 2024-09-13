@@ -17,8 +17,8 @@ const App: React.FC = () => {
       <div className="container">
         <HomeProjects />
         <Slider />
-        <Cta />
         <Reviews />
+        <Cta />
       </div>
       <Footer />
     </>
