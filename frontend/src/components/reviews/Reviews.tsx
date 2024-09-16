@@ -33,7 +33,7 @@ const reviews = [
 
 const Reviews: React.FC = () => {
   return (
-    <div className={styles.reviewSection}>
+    <div className={`${styles.reviewSection}` }>
       <ScrollingText />
       <div className={styles.reviewContainer}>
         {reviews.map((review) => {

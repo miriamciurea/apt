@@ -12,7 +12,7 @@
     transition: opacity 0.5s ease, transform 0.5s ease;
     /* Smooth transitions */
   }
-  
+
   .reviewInstance {
     flex: 1;
     max-width: 30%;
@@ -24,7 +24,7 @@
     box-sizing: border-box;
     /* Include padding and border in width */
   }
-  
+
   .reviewImage {
     width: 100px;
     /* Width of the image */
@@ -33,19 +33,24 @@
     border-radius: 50%;
     /* Circular image */
   }
-  
+
   .clientName {
     font-weight: bold;
     margin-top: 10px;
   }
-  
+
   .reviewLine {
     width: 60%;
     margin: 10px auto;
     border: 0.5px solid #007AFF;
   }
-  
+
   .reviewText {
     margin-top: 10px;
   }
-  
+
+  @media (max-width: 700px) {
+    .reviewInstance {
+      min-width: 100%;
+    }
+  }
