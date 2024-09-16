@@ -1,0 +1,13 @@
+.dotlottie-player{
+  max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    /* Make it responsive */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Ensure block display */
+    margin: 0 auto;
+    /* Center align horizontally if needed */
+    background-color: blue;
+}

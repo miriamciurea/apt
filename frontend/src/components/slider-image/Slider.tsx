@@ -36,8 +36,7 @@ const Slider: React.FC = () => {
 
   return (
     <div className={styles.home}>
-      <div
-        className={styles.background}
+      <div className={styles.background}
         style={{ backgroundImage: `url(${imageUrl})`, backgroundPosition: 'var(--background-position)' }}
       >
         <div className={styles.overlay}>
@@ -46,7 +45,7 @@ const Slider: React.FC = () => {
           </div>
           <div className={styles.text}>
             <p>
-              In the ever-changing construction industry, we’re proud to offer <span class="highlight">competitive benefits</span> along with an <span class="highlight">education allowance</span> to help employees continue to learn and develop. We strive to foster a work environment where relationships are valued and every team member is treated with <span class="highlight">trust and respect</span>.
+              In the ever-changing construction industry, we’re proud to offer <span className="highlight">competitive benefits</span> along with an <span className="highlight">education allowance</span> to help employees continue to learn and develop. We strive to foster a work environment where relationships are valued and every team member is treated with <span className="highlight">trust and respect</span>.
             </p>
           </div>
           <div className={styles.link}>
