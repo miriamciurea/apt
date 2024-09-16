@@ -5,8 +5,8 @@ const Loop: React.FC = () => {
   return (
     <div className = {styles.container} >
       <div className = {styles.slidingText}>
-        INNOVATION - RAILWAY - CONSTRUCTION - OPTIC FIBER - TEAM WORK
-      </div>
+        INNOVATION - RAILWAY - CONSTRUCTION - OPTIC FIBER - TEAM WORK - INNOVATION - RAILWAY - CONSTRUCTION - OPTIC FIBER - TEAM WORK -
+        </div>
     </div>
 
   )
