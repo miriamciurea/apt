@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import styles from '../dotie/Dotie.module.css';
 
 const DotLottiePlayer = () => {
   useEffect(() => {
