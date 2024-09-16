@@ -9,6 +9,7 @@ import Reviews from "./components/reviews/Reviews";
 import HomeProjects from "./components/home-projects/HomeProjects";
 import Slider from "./components/slider-image/Slider";
 import Loop from "./components/loop/Loop";
+import Domain from "./components/domains/Domain";
 
 const App: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const App: React.FC = () => {
       <Navbar />
       <Hero />
       <div className="container">
+        <Domain />
         <HomeProjects />
         <Loop />
         <Slider />
