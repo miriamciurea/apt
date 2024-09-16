@@ -10,6 +10,7 @@ import HomeProjects from "./components/home-projects/HomeProjects";
 import Slider from "./components/slider-image/Slider";
 import Loop from "./components/loop/Loop";
 import Domain from "./components/domains/Domain";
+import CompanyValues from "./components/company-values/CompanyValues";
 
 const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <HomeProjects />
         <Loop />
         <Slider />
+        <CompanyValues />
         <Reviews />
         <Cta />
       </div>
