@@ -10,17 +10,17 @@ const Domain: React.FC = () => {
     {
       component: <LottieAnimation animation={construction} />,
       subtitle: "CONSTRUCTION",
-      description: "Description for Lottie Animation 1",
+      description: "Constructing tommorow with expertise.",
     },
     {
       component: <LottieAnimation animation={train} />,
       subtitle: "CIVIL - RAIL",
-      description: "Description for Lottie Animation 2",
+      description: "Reliable Rail-Civil infrastructure. ",
     },
     {
       component: <LottieAnimation animation={electric} />,
       subtitle: "UTILITY | POWER",
-      description: "Description for Lottie Animation 3",
+      description: "Empowering your grid, sustainably.",
     },
   ];
 
