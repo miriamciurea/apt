@@ -47,6 +47,8 @@ const CompanyValues: React.FC = () => {
     },
   ];
 
+
+
   return (
     <div className={styles.container}>
       <h2 className={styles.subtitle}>OUR COMPANY VALUES</h2>

@@ -7,9 +7,10 @@
   text-align: left;
     /* Align the title text to the left */
     margin-bottom: 40px;
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: 400;
-    padding-left: 30px
+    padding-left: 30px;
+    font-family: var(--principal);
 }
 
 .values {
@@ -52,3 +53,34 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
+@media (max-width: 768px) {
+  .values {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .value {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 642px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+}
+/* Styles for larger screens */
+/* @media (min-width: 768px) {
+  .values {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .value {
+    display: block;
+  }
+} */
