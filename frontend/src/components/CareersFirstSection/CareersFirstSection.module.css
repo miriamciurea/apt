@@ -1,0 +1,112 @@
+.container {
+    margin: 0 50px;
+}
+.reasonsContainer {
+    display: flex;
+    justify-content: space-around;
+}
+.title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: left;   
+    max-width: 900px;
+    border-bottom: 1px solid #007AFF;
+    padding-bottom: 30px;
+}
+
+.subTitle {
+    text-align: center;
+}
+
+.title .highlight {
+    color: #007AFF;
+}
+
+.image {
+    width: 320px;
+    height: 480px;
+}
+  .agCoursesItem {
+    width: 600px;
+    margin: 0 15px 30px;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .agCoursesItemLink {
+    display: block;
+    background-color: #121212;
+    overflow: hidden;
+    position: relative;
+  }
+  .ag-courses-item_link:hover,
+  .ag-courses-item_link:hover .ag-courses-item_date {
+    text-decoration: none;
+    color: #FFF;
+  }
+  .agCoursesItemLink:hover .agCoursesItemBg {
+    -webkit-transform: scale(10);
+    -ms-transform: scale(10);
+    transform: scale(15);
+  }
+  .agCoursesItemTitle {
+    overflow: hidden;
+    font-size: 20px;
+    color: #FFF;
+    padding: 10px 15px;
+    z-index: 2;
+    position: relative;
+  }
+ 
+  .agCoursesItemBg {
+    height: 110px;
+    width: 110px;
+    background-color: #007AFF;
+  
+    z-index: 1;
+    position: absolute;
+    top: -75px;
+    right: -75px;
+  
+    border-radius: 50%;
+  
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  
+  
+  @media only screen and (max-width: 979px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+    }
+    .ag-courses-item_title {
+      font-size: 24px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .ag-format-container {
+      width: 96%;
+    }
+  
+  }
+  @media only screen and (max-width: 639px) {
+    .ag-courses_item {
+      -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+    }
+    .ag-courses-item_title {
+      min-height: 72px;
+      line-height: 1;
+  
+      font-size: 24px;
+    }
+    .ag-courses-item_link {
+      padding: 22px 40px;
+    }
+    .ag-courses-item_date-box {
+      font-size: 16px;
+    }
+  }
