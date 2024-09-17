@@ -1,10 +1,16 @@
-import React from 'react';
+import React from "react";
+import EarlyDays from "../../components/early-days/EarlyDays";
 
 const About: React.FC = () => {
-
   return (
-    <>hey</>
+    <>
+      <div className="container">
+        <EarlyDays />
+      </div>
+    </>
   );
 };
 
-export default About;
+export default About
+
+{/* <Hero /> */}
