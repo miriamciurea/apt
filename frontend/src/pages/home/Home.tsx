@@ -1,9 +1,26 @@
-// import React from 'react'
+import React from "react";
+import Hero from "../../components/navbar/Hero";
+import Reviews from "../../components/reviews/Reviews";
+import HomeProjects from "../../components/home-projects/HomeProjects";
+import Slider from "../../components/slider-image/Slider";
+import Loop from "../../components/loop/Loop";
+import Domain from "../../components/domains/Domain";
+import CompanyValues from "../../components/company-values/CompanyValues";
 
-function Home() {
+const Home: React.FC = () => {
   return (
-    <div>Home as in HOMEPAGE</div>
-  )
-}
+    <>
+      <Hero />
+      <div className="container">
+        <Domain />
+        <HomeProjects />
+        <Loop />
+        <Slider />
+        <CompanyValues />
+        <Reviews />
+      </div>
+    </>
+  );
+};
 
 export default Home

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import styles from './Navbar.module.css';
 import newlogo from '../../assets/newlogo.png';
 
@@ -11,44 +12,44 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a href="/" className={styles.logoLink}>
+      <Link to="/" className={styles.logoLink}>
         <img src={newlogo} alt="logo" className={styles.logo} />
-      </a>
+      </Link>
       <div className={styles.menuIcon} onClick={toggleMenu}>
         <i className="fas fa-bars"></i>
       </div>
       <ul className={`${styles.navList} ${isMenuOpen ? styles.showMenu : ''}`}>
         <li className={styles.navItem}>
-          <a href="/about" className={`${styles.navLink} ${styles.learnMore}`}>
+          <Link to="/about" className={`${styles.navLink} ${styles.learnMore}`}>
             <span className={styles.circle} aria-hidden="true">
               <span className={`${styles.icon} ${styles.arrow}`}></span>
             </span>
             <span className={styles.buttonText}>ABOUT US</span>
-          </a>
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <a href="/careers" className={`${styles.navLink} ${styles.learnMore}`}>
+          <Link to="/careers" className={`${styles.navLink} ${styles.learnMore}`}>
             <span className={styles.circle} aria-hidden="true">
               <span className={`${styles.icon} ${styles.arrow}`}></span>
             </span>
             <span className={styles.buttonText}>CAREERS</span>
-          </a>
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <a href="/projects" className={`${styles.navLink} ${styles.learnMore}`}>
+          <Link to="/projects" className={`${styles.navLink} ${styles.learnMore}`}>
             <span className={styles.circle} aria-hidden="true">
               <span className={`${styles.icon} ${styles.arrow}`}></span>
             </span>
             <span className={styles.buttonText}>PROJECTS</span>
-          </a>
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <a href="/getintouch" className={`${styles.navLink} ${styles.learnMore}`}>
+          <Link to="/getintouch" className={`${styles.navLink} ${styles.learnMore}`}>
             <span className={styles.circle} aria-hidden="true">
               <span className={`${styles.icon} ${styles.arrow}`}></span>
             </span>
             <span className={styles.buttonText}>GET IN TOUCH</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

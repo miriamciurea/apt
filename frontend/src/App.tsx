@@ -1,31 +1,24 @@
 import React from "react";
-// import { Route, Routes} from 'react-router-dom'
-// import Home from './pages/home/Home'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Hero from "./components/navbar/Hero";
 import Cta from "./components/cta/Cta";
-import Reviews from "./components/reviews/Reviews";
-import HomeProjects from "./components/home-projects/HomeProjects";
-import Slider from "./components/slider-image/Slider";
-import Loop from "./components/loop/Loop";
-import Domain from "./components/domains/Domain";
-import CompanyValues from "./components/company-values/CompanyValues";
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import NotFound from './pages/not-found/NotFound'
 
 const App: React.FC = () => {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <div className="container">
-        <Domain />
-        <HomeProjects />
-        <Loop />
-        <Slider />
-        <CompanyValues />
-        <Reviews />
-        <Cta />
-      </div>
+    <Navbar />
+       <div className="container">
+           <Routes>
+             <Route path="/" element={<Home />} />
+             <Route path="/about" element={<About />} />
+             <Route path="*" element={<NotFound />} />
+           </Routes>
+         <Cta />
+       </div>
       <Footer />
     </>
   );
@@ -33,6 +26,12 @@ const App: React.FC = () => {
 
 export default App;
 
+
 // <Routes>
 //   <Route path="/" element={<Home />} />
 // </Routes>
+
+{/* <Route path="/about" element={<AboutUs />} />
+<Route path="/careers" element={<Careers />} />
+<Route path="/projects" element={<Projects />} />
+<Route path="/getintouch" element={<GetInTouch />} /> */}
