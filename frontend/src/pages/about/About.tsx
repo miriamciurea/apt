@@ -10,8 +10,8 @@ const About: React.FC = () => {
 
       <div className="container">
             <AboutHeader />
-        <EarlyDays />
         <AboutUsDescription />
+        <EarlyDays />
         <Team />
        </div>
     </>
