@@ -1,0 +1,22 @@
+.iconContainer {
+  text-align: center;
+  padding: 20px;
+}
+
+.icon {
+  font-size: 80px;
+  color: #7e8489; /* Adjust this to match the gray color in the image */
+}
+
+.underline {
+  width: 50px;
+  margin: 10px auto;
+  border: none;
+  border-top: 2px solid #7e8489; /* Matching color for the line */
+}
+
+.iconText {
+  font-size: 16px;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
