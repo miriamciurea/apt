@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5; // Adjust the playback rate (0.5 is 50% speed)
+      videoRef.current.playbackRate = 1; // Adjust the playback rate (0.5 is 50% speed)
     }
   }, []);
 
