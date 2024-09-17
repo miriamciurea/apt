@@ -33,7 +33,6 @@ const HomeProjects: React.FC = () => {
     };
   }, []);
 
-  // Array of projects (with image URL and project info)
   const projects = [
     {
       src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D",
@@ -100,6 +99,15 @@ const HomeProjects: React.FC = () => {
             >{project.info}</div>
           </div>
         ))}
+      </div>
+
+      <div className={styles.gliderScrollbar}>
+      <div
+        className={styles.gliderScrollbarHandle}
+        style={{
+          transform: `translateX(${offsetX}%)`, // Moves based on scroll percentage
+        }}
+      ></div>
       </div>
     </div>
   );
