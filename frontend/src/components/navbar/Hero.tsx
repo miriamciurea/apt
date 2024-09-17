@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './Hero.module.css';
 // import backround from '../../assets/backround-hero.webp';
+import videoBG from '../../assets/autumn.mp4';
 
 
 const Hero: React.FC = () => {
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5; // Adjust the playback rate (0.5 is 50% speed)
+    }
+  }, []);
+
   return (
     <section className={styles.hero}>
+      <video src={videoBG} autoPlay loop muted className={styles.video} ref={videoRef}></video>
+      <div className={styles.overlay}></div>
+      <div className={styles.logoContainer}>
+        {/* <img src={logo} alt="Logo" /> */}
+      </div>
       <div className={styles.content}>
         <h1 className={styles.title}>
           <span className={styles.innovative}>INNOVATIVE</span><br />
@@ -30,5 +45,6 @@ const Hero: React.FC = () => {
     </section>
   );
 };
+
 
 export default Hero;
