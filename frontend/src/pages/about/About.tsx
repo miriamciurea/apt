@@ -1,14 +1,20 @@
 import React from "react";
+import EarlyDays from "../../components/early-days/EarlyDays";
 import AboutUsDescription from "../../components/AboutUsDescription/AboutUsDescription";
 import Team from "../../components/Team/Team";
 
 const About: React.FC = () => {
   return (
     <>
-      <AboutUsDescription />
-      <Team />
+      <div className="container">
+        <EarlyDays />
+        <AboutUsDescription />
+        <Team />
+       </div>
     </>
   );
 };
 
-export default About;
+export default About
+
+{/* <Hero /> */}
