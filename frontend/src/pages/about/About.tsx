@@ -3,7 +3,8 @@ import EarlyDays from "../../components/early-days/EarlyDays";
 import AboutUsDescription from "../../components/AboutUsDescription/AboutUsDescription";
 import Team from "../../components/Team/Team";
 import AboutHeader from "../../components/about-header/aboutHeader";
-import WhatWeOffer from "../../components/WhatWeOffer/WhatWeOffer";
+import LeftHeader from "../../components/left-header/LeftHeader";
+
 
 const About: React.FC = () => {
   return (
@@ -13,7 +14,8 @@ const About: React.FC = () => {
         <AboutUsDescription />
         <EarlyDays />
         <Team />
-        <WhatWeOffer />
+        <LeftHeader />
+
       </div>
     </>
   );
