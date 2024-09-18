@@ -1,0 +1,25 @@
+.formContainer {
+    margin: 20px 50px;
+    background-color: #DFDFDA;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;   
+    text-align: center;
+}
+
+.title .highlight {
+    color: #007AFF;
+}
+
+.title .underlined {
+    text-decoration: underline;
+ }
+ .form {
+    display: flex;
+    flex-direction: column;
+ }
