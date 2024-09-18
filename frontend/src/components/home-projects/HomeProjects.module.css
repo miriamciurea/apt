@@ -39,18 +39,8 @@
 }
 
 
-/* .project {
-  position: relative;
-  display: inline-block;
-
-  height: 240px;
-  width: 360px;
-
-  overflow: hidden;
-} */
 
 .projects {
-  /* Horizontal Scrollbar */
   &::-webkit-scrollbar:horizontal {
     height: 20px; /* Adjust height for horizontal scrollbar */
   }
