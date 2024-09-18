@@ -6,19 +6,6 @@
   background-color: var(--white);
 
 }
-/* .projects {
-  display: flex;
-  overflow-y: scroll;
-  gap: 30px;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-  position: relative;
-  height: 70vh;
-
-  scrollbar-width: auto;
-  scrollbar-color: #888 #e3e3e3;
-} */
 
 .projects {
   display: flex;
@@ -29,16 +16,12 @@
   -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
   scroll-behavior: smooth; /* Smooth scrolling */
   position: relative;
-  height: 70vh;
+  height: auto;
+  padding: 25px 0px;
 
   scrollbar-width: auto; /* Firefox: auto width */
   scrollbar-color: #888 #e3e3e3; /* Firefox: scrollbar color */
 }
-/* .projects::-webkit-scrollbar {
-  height: 12px;
-  width: 12px;
-  background-color: var(--blue);
-} */
 
 .title {
   font-family: var(--principal);
@@ -56,39 +39,15 @@
 }
 
 
-.project {
+/* .project {
   position: relative;
   display: inline-block;
-  min-width: 300px;
 
-  /* display: flex;
-  flex-direction: column;
-  justify-content: end; */
-}
+  height: 240px;
+  width: 360px;
 
-.project img {
-  max-height: 80vh;
-  max-width: 100%;
-  position: relative;
-}
-
-.frame::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
-.frame::-webkit-scrollbar:vertical {
-  width: 11px;
-}
-
-.frame::-webkit-scrollbar:horizontal {
-  height: 11px;
-}
-
-.frame::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  border: 2px solid white; /* should match background, can't be transparent */
-  background-color: rgba(0, 0, 0, .5);
-}
+  overflow: hidden;
+} */
 
 .projects {
   /* Horizontal Scrollbar */
