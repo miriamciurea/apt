@@ -1,6 +1,7 @@
 import React from "react";
 import CareersFirstSection from "../../components/CareersFirstSection/CareersFirstSection";
 import SendCVForm from "../../components/SendCVForm/SendCVForm";
+import Cta from "../../components/cta/Cta";
 
 const Careers: React.FC = () => {
   return (
@@ -9,6 +10,7 @@ const Careers: React.FC = () => {
         <CareersFirstSection />
         <SendCVForm />
       </div>
+      <Cta />
     </>
   );
 };

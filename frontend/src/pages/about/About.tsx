@@ -4,6 +4,7 @@ import AboutUsDescription from "../../components/AboutUsDescription/AboutUsDescr
 import Team from "../../components/Team/Team";
 import AboutHeader from "../../components/about-header/aboutHeader";
 import LeftHeader from "../../components/left-header/LeftHeader";
+import Cta from "../../components/cta/Cta";
 
 
 const About: React.FC = () => {
@@ -15,7 +16,7 @@ const About: React.FC = () => {
         <EarlyDays />
         <Team />
         <LeftHeader />
-
+        <Cta />
       </div>
     </>
   );

@@ -2,11 +2,12 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import Cta from "./components/cta/Cta";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import NotFound from "./pages/not-found/NotFound";
 import Careers from "./pages/Careers/Careers";
+import Copyright from './components/copyright/Copyright';
+
 
 const App: React.FC = () => {
   return (
@@ -15,11 +16,11 @@ const App: React.FC = () => {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/copyright" element={<Copyright />} />
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Cta />
       </div>
       <Footer />
     </>
