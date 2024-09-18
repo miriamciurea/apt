@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Slider.module.css'; // Import the CSS module
+import styles from './Slider.module.css';
 
 const Slider: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string>('');
@@ -22,7 +22,7 @@ const Slider: React.FC = () => {
     fetchImage();
 
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const scrollPercent = scrollTop / (document.documentElement.scrollHeight - window.innerHeight);
       const offset = scrollPercent * 100; // Adjust the multiplier as needed
       document.documentElement.style.setProperty('--background-position', `center ${offset}%`);
