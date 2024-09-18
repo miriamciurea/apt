@@ -1,0 +1,106 @@
+.container {
+  text-align: center;
+  padding: 100px  0;
+  background-color: #DFDFDA;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: var(--blue);
+  /* Make sure var(--blue) is defined in your CSS variables */
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* Ensure images wrap on smaller screens */
+  margin-bottom: 20px;
+  /* Add space between images and subtitles */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 300px;
+  /* Adjust as needed */
+  height: 200px;
+  /* Adjust as needed */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #ddd;
+  /* Add border for visibility */
+  transition: transform 0.3s ease;
+}
+
+/* Use relative paths to the images */
+.imageWrapper:nth-of-type(1) {
+  background-image: url('../../assets/image1.JPG');
+}
+
+.imageWrapper:nth-of-type(2) {
+  background-image: url('../../assets/fence.JPG');
+}
+
+.imageWrapper:nth-of-type(3) {
+  background-image: url('../../assets/construction1.jpg');
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+  padding: 10px;
+  text-align: center;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.1);
+}
+
+.imageWrapper:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  color: var(--white);
+  /* Adjust color as needed */
+  margin-top: 10px;
+  /* Space between image and subtitle */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    /* Adjust for smaller screens */
+    height: 150px;
+    /* Adjust for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
