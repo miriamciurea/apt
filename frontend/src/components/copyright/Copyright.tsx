@@ -1,4 +1,6 @@
 import React from 'react';
+import './Copyright.module.css'; // Import the CSS file
+
 
 const Copyright: React.FC = () => {
   return (
