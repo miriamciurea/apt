@@ -19,12 +19,22 @@
   justify-content: space-around;
 }
 
+.readMoreButton {
+  background-color: transparent;
+  border: none;
+  color: #1D2327;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
 .value {
   width: 22%;
   min-height: 200px;
   /* Increased height */
-  border-left: 4px solid blue;
-  border-top: 4px solid blue;
+  border-left: 4px solid #DFDFDA;
+  border-top: 4px solid #DFDFDA;
   padding: 20px;
   margin-bottom: 20px;
   box-sizing: border-box;
