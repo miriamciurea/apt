@@ -6,6 +6,7 @@ import Slider from "../../components/slider-image/Slider";
 import Loop from "../../components/loop/Loop";
 import Domain from "../../components/domains/Domain";
 import CompanyValues from "../../components/company-values/CompanyValues";
+import Cta from "../../components/cta/Cta";
 
 const Home: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const Home: React.FC = () => {
         <Slider />
         <CompanyValues />
         <Reviews />
+        <Cta />
       </div>
     </>
   );
