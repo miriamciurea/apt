@@ -15,7 +15,8 @@
   /* background-color: var(--white); */
   height: 40vh;
   font-family: var(--principal);
-  border-bottom: 1px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  margin-bottom: 20px;
 }
 
 .title {
