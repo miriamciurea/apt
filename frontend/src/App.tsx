@@ -6,8 +6,9 @@ import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import NotFound from "./pages/not-found/NotFound";
 import Careers from "./pages/Careers/Careers";
+import Projects from './pages/projects/Projects';
+import ProjectShow from './pages/projects/ProjectShow';
 import Copyright from './components/copyright/Copyright';
-
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,8 @@ const App: React.FC = () => {
           <Route path="/copyright" element={<Copyright />} />
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectShow />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
@@ -28,14 +31,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-// <Routes>
-//   <Route path="/" element={<Home />} />
-// </Routes>
-
-{
-  /* <Route path="/about" element={<AboutUs />} />
-<Route path="/careers" element={<Careers />} />
-<Route path="/projects" element={<Projects />} />
-<Route path="/getintouch" element={<GetInTouch />} /> */
-}
