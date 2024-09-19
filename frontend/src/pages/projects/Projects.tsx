@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Projects.module.css';
 import Hero from './hero/Hero';
+import 'animate.css';
 
 interface Project {
   id: number;
@@ -17,6 +18,7 @@ const Projects: React.FC = () => {
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [selectedSector, setSelectedSector] = useState<string>('All');
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [animationClass, setAnimationClass] = useState<string>(''); // State to manage animation class
 
   useEffect(() => {
     fetch('/projects.json')
@@ -44,11 +46,25 @@ const Projects: React.FC = () => {
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredProjects.length);
+    // Start the "exit" animation
+    setAnimationClass('animate__animated animate__backOutDown');
+
+    // Wait for the animation to complete before changing the project
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % filteredProjects.length);
+      setAnimationClass('animate__animated animate__backInDown'); // Start the "enter" animation
+    }, 500); // Adjust the timeout to match the animation duration
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + filteredProjects.length) % filteredProjects.length);
+    // Start the "exit" animation
+    setAnimationClass('animate__animated animate__backOutDown');
+
+    // Wait for the animation to complete before changing the project
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + filteredProjects.length) % filteredProjects.length);
+      setAnimationClass('animate__animated animate__backInDown'); // Start the "enter" animation
+    }, 500); // Adjust the timeout to match the animation duration
   };
 
   const currentProject = filteredProjects[currentIndex];
@@ -74,8 +90,10 @@ const Projects: React.FC = () => {
         </div>
 
         {currentProject && (
-          <div className={styles.projectDisplay}>
-
+          <div
+            className={`${styles.projectDisplay} ${animationClass}`}
+            onAnimationEnd={() => setAnimationClass('')} // Reset animation class after it completes
+          >
             <div className={styles.projectInfo}>
               <h2>{currentProject.name}</h2>
               <p>{currentProject.location}</p>
@@ -85,9 +103,6 @@ const Projects: React.FC = () => {
               className={styles.projectImage}
               style={{
                 backgroundImage: `url(${currentProject.photos[0]})`,
-                // height: '300px',
-                // width: '400px',
-                // backgroundAttachment: 'fixed',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -95,36 +110,35 @@ const Projects: React.FC = () => {
             />
 
             <div className={styles.side}>
-
               <div className={styles.projectCounter}>
                 {currentIndex + 1} / {filteredProjects.length}
               </div>
-
 
               <Link to={`/projects/${currentProject.id}`} className={styles.readMoreButton}>
                 view project
               </Link>
 
               <div className={styles.navigation}>
-                <button onClick={handlePrev}><span className="material-symbols-outlined" style={{color: `#2877CE`}}>
-                  keyboard_double_arrow_left
-                  </span> PREV</button>
-                <button onClick={handleNext}>NEXT <span className="material-symbols-outlined" style={{color: `#2877CE`}}>double_arrow</span>
+                <button onClick={handlePrev}>
+                  <span className="material-symbols-outlined" style={{ color: `#2877CE` }}>
+                    keyboard_double_arrow_left
+                  </span> PREV
+                </button>
+                <button onClick={handleNext}>
+                  NEXT <span className="material-symbols-outlined" style={{ color: `#2877CE` }}>double_arrow</span>
                 </button>
               </div>
-
             </div>
-
           </div>
         )}
-
-
       </div>
     </>
   );
 };
 
 export default Projects;
+
+
 
 
 // import React, { useEffect, useState } from 'react';
