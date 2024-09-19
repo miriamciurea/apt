@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className={styles.subtitle}>
-      We believe in the power of <strong>strong partnerships</strong>. Every <span>collaboration</span>, no matter the scale, is treated <strong>with the utmost care and respect</strong>.
+      We believe in the power of <strong>strong partnerships</strong>. <u>Every</u> <span>collaboration</span>, no matter the scale, is treated <strong>with the utmost care and respect</strong>.
       </div>
     </header>
   );

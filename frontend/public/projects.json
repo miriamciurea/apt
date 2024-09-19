@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Kent Projects",
-    "description": "A major construction project in Kent, UK, involving multiple residential and commercial buildings. This project includes the development of high-rise apartments, retail spaces, and infrastructure upgrades. The scope of work extends to road network improvements, landscaping, and the installation of utilities. The team is working on creating a pedestrian-friendly environment with green spaces and community facilities. Additional elements include the construction of underground parking, security systems, and recreational areas for residents. This large-scale development aims to enhance urban living while prioritizing sustainability, energy efficiency, and modern architectural aesthetics.",
+    "name": "The Great Kent Projects",
+    "description": "A major construction project in Kent, UK, involving multiple residential and commercial buildings.",
     "location": "Kent, UK",
     "completionDate": "2025-12-01",
     "sector": "Construction",
@@ -18,7 +18,7 @@
     "description": "An extensive construction site in the US featuring state-of-the-art facilities.",
     "location": "US",
     "completionDate": "2024-08-15",
-    "sector": "Construction",
+    "sector": "Optic Fiber",
     "photos": [
       "https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D",
       "https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D"

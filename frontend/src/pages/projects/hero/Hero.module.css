@@ -1,0 +1,46 @@
+header {
+  border-top: 1px solid var(--blue);
+  /* border-bottom: 1px solid var(--blue); */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Place the line at the bottom */
+  left: 2%; /* Start 20px from the left */
+  right: 2%; /* End 20px from the right */
+  height: 1px;
+  background-color: var(--blue); /* Same color as your border */
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--blue);
+  font-family: var(--principal);
+  font-weight: 100;
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.subtitle {
+  span {
+    color: var(--blue);
+  }
+}
+
+@media (max-width: 690px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
