@@ -1,0 +1,145 @@
+container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two equal columns */
+  grid-template-rows: auto auto auto;
+  /* Three rows: title/details, description, slider */
+  grid-template-areas:
+    "title details"
+    "description description"
+    "slider slider";
+  gap: 20px;
+  padding: 0px 20px;
+  /* Increased top padding */
+  position: relative;
+}
+
+/* Title Section */
+.titleSection {
+  grid-area: title;
+  position: relative;
+  font-size: 2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+.detailsSection {
+  grid-area: details;
+  padding: 10px;
+  text-align: left;
+  /* Set text alignment to the left */
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  /* Set the font family */
+  font-size: 24px;
+  /* Set the font size */
+  color: #7D8690;
+  /* Set the color */
+}
+
+/* Label styling (Location, Completion Date, Sector) */
+.label {
+  display: inline-block;
+  /* Allows space between label and value */
+  width: 50%;
+  /* Adjust the width to control label positioning */
+  text-align: left;
+  /* Align labels to the left */
+}
+
+/* Value styling */
+.value {
+  display: inline-block;
+  /* Allows space between label and value */
+  width: 50%;
+  /* Adjust the width to control value positioning */
+  text-align: right;
+  /* Align values to the right */
+  color: black;
+  /* Set the color for values */
+}
+
+/* Description Section */
+.descriptionSection {
+  grid-area: description;
+  padding: 10px;
+  column-count: 2;
+  column-gap: 20px;
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Slider Section */
+.sliderSection {
+  grid-area: slider;
+  padding: 40px 0;
+}
+
+.photoGallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  background-color: #DFDFDA;
+  padding-top: 40px;
+  width: 100vw;
+  padding-bottom: 40px;
+  margin-left: calc(-50vw + 50%);
+  gap: 40px
+}
+
+.photoGallery img:first-child {
+  padding-left: 40px;
+}
+
+.photoGallery img {
+  width: 300px;
+  height: auto;
+
+
+}
+
+/* Top horizontal line */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #007AFF;
+  /* height: calc(100% - 60px); */
+}
+
+/* Middle horizontal line */
+.descriptionSection::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  /* Adjust to position the line */
+  left: 0;
+  right: 40%;
+  /* Shorten the line from the right-hand side by 50px */
+  height: 1px;
+  background-color: #007AFF;
+}
+
+/* Vertical line */
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: +400px;
+  left: 50%;
+  width: 1px;
+  background-color: #007AFF;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Custom horizontal line between title and details */
