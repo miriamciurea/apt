@@ -34,9 +34,7 @@
   /* Allow icons to wrap to the next line if needed */
   gap: 20px;
   /* Add space between the icons */
-  max-width: 1200px;
-  max-height: 400px;
-  /* Optional: Set a max-width for better alignment */
+
   margin: 0 auto;
   /* Center the icons container */
 
@@ -79,4 +77,66 @@
 .domainContainer {
   position: relative;
   /* Or other positioning if needed */
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 1024px) {
+  .iconsContainer {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Optional: Center vertically if the container has a set height */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .iconBlock {
+    flex-basis: calc(50% - 20px); /* Adjust to 2 per row */
+  }
+
+  .title {
+    font-size: 6vw; /* Larger font for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 2vw;
+  }
+
+  .description {
+    font-size: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .iconBlock {
+    flex-basis: calc(100% - 20px); /* Stack blocks on smaller screens */
+  }
+
+  .title {
+    font-size: 7vw;
+  }
+
+  .subtitle {
+    font-size: 3vw;
+  }
+
+  .description {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 8vw;
+  }
+
+  .subtitle {
+    font-size: 4vw;
+  }
+
+  .description {
+    font-size: 3vw;
+  }
 }
