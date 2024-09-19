@@ -1,17 +1,32 @@
+
+
+
 [
   {
-    "id": 1,
-    "name": "The Great Kent Projects",
-    "description": "A major construction project in Kent, UK, involving multiple residential and commercial buildings.",
-    "location": "Kent, UK",
-    "completionDate": "2025-12-01",
-    "sector": "Construction",
-    "photos": [
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D",
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D"
-    ]
-
+  "id": 1,
+  "name":" Lowestoft Fibre Network",
+  "description": "This project involved a Fibre to the Home (FTTH) network, covering 30,000 homes with both underground and overhead installations serviced via the Fibre Exchange.\n\nScope of Work:\n- Installation and excavation of public highways, footways, and private land.\n- Installation of fibre optic cables in new and existing highways.\n- Ductwork and cable installations in public and private buildings.\n- Street cabinet installations and overhead pole access.\n\nPod-Trak focused on risk control by updating the Project Hazard Register, ensuring high-quality delivery with an excellent Health & Safety record. Close engagement with the local authority helped minimize disruption to the public and businesses.\n\nKey Stats:\n- Excavation of 180,000m of track.\n- Delivered on time and within budget, leading to another major project award.",
+  "location": "Lowestoft, UK",
+  "completionDate": "2022-12-01",
+  "sector": "Telecom",
+  "value": "£15m",
+  "customerOrganisation": {
+    "name": "City Fibre",
+    "contactPerson": {
+      "name": "Ben Snape",
+      "title": "Project Manager",
+      "email": "Ben.snape@cityfibre.com"
+    }
   },
+  "photos": [
+    "/images/lof2.JPG",
+    "/images/lof1.JPG",
+    "/images/lof3.JPG",
+    "/images/lof4.JPG"
+  ]
+},
+
+
   {
     "id": 2,
     "name": "Build Works",

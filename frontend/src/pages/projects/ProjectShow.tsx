@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './ProjectShow.module.css';
@@ -27,6 +26,21 @@ const ProjectShow: React.FC = () => {
       .catch(error => console.error('Error fetching project:', error));
   }, [id]);
 
+  // Utility function to format the description
+  const formatDescription = (description: string) => {
+    return description.split('\n').map((text, index) => {
+      // Add highlights to specific keywords
+      if (text.includes('Scope of Work:') || text.includes('Key Stats:')) {
+        return (
+          <p key={index}>
+            <strong>{text}</strong>
+          </p>
+        );
+      }
+      return <p key={index}>{text}</p>;
+    });
+  };
+
   if (!project) {
     return <div>Loading...</div>;
   }
@@ -38,26 +52,23 @@ const ProjectShow: React.FC = () => {
         <h1>{project.name}</h1>
       </div>
       <div className={styles.detailsSection}>
-        <div className={styles.detailsSection}>
-  <p>
-    <span className={styles.label}>Location:</span>
-    <span className={styles.value}>{project.location}</span>
-  </p>
-  <p>
-    <span className={styles.label}>Completion Date:</span>
-    <span className={styles.value}>{project.completionDate}</span>
-  </p>
-  <p>
-    <span className={styles.label}>Sector:</span>
-    <span className={styles.value}>{project.sector}</span>
-  </p>
-</div>
-
+        <p>
+          <span className={styles.label}>Location:</span>
+          <span className={styles.value}>{project.location}</span>
+        </p>
+        <p>
+          <span className={styles.label}>Completion Date:</span>
+          <span className={styles.value}>{project.completionDate}</span>
+        </p>
+        <p>
+          <span className={styles.label}>Sector:</span>
+          <span className={styles.value}>{project.sector}</span>
+        </p>
       </div>
 
       {/* Second row: Description */}
       <div className={styles.descriptionSection}>
-        <p>{project.description}</p>
+        {formatDescription(project.description)}
       </div>
 
       {/* Third row: Image Slider */}
