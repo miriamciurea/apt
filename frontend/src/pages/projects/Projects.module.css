@@ -1,0 +1,204 @@
+.filterContainer {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding: 20px 0px 20px 40px;
+
+}
+
+.filterContainer select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  padding: 10px;
+  appearance: none; /* Removes default arrow */
+  -webkit-appearance: none; /* Removes default arrow for WebKit browsers */
+  -moz-appearance: none; /* Removes default arrow for Firefox */
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  padding-right: 35px; /* To make space for a custom arrow */
+}
+
+.filterContainer select::focus {
+  border: none;
+  outline: none;
+}
+
+.filterContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.filterContainer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Position the arrow */
+  transform: translateY(-50%);
+  width: 24px; /* Set width for SVG */
+  height: 24px; /* Set height for SVG */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="%232877ce"><path d="M480-214.62 253.85-440.77 296-482.92l184 183.38 184-183.38 42.15 42.15L480-214.62Zm0-239.23L253.85-680 296-722.15l184 183.38 184-183.38L706.15-680 480-453.85Z"/></svg>');
+  background-size: cover; /* Scale the SVG to fit */
+  pointer-events: none; /* Allows clicking on the select element */
+  color: var(--blue);
+}
+
+.filterContainer label {
+  text-transform: uppercase; /* Ensure label is uppercase */
+}
+
+.filterContainer select option {
+  text-transform: uppercase; /* Ensure options are uppercase */
+}
+
+.containerProjects {
+  background-color: var(--bg);
+}
+
+.projectDisplay {
+  background-color: var(--white);
+  margin: 0px 50px;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 60vh;
+}
+
+.projectImage {
+  margin: 20px 0px;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.containerProjects {
+
+
+  h2 {
+    position: absolute;
+    font-size: 3rem;
+    font-family: var(--principal);
+    text-shadow: 5px 5px 9px rgba(255, 255, 255, 1);
+    max-width: 400px;
+
+  }
+
+  p {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: end;
+  }
+
+  .side {
+    padding: 20px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+  }
+
+  .projectCounter {
+    font-family: var(--principal);
+    font-size: 1rem;
+    color: black;
+    justify-self: end;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+
+  a {
+    align-self: end;
+    justify-self: center;
+    /* margin-bottom: 30px; */
+    text-decoration: none;
+    color: black;
+    border: 1px solid var(--blue);
+    padding: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navigation {
+    width: 100%;
+    align-self: end;
+    justify-self: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); */
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  button:hover {
+    background-color: #e7e7d4;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 1013px) {
+  .containerProjects {
+    h2 {
+      max-width: 300px;
+    }
+
+  }
+}
+
+
+@media (max-width: 910px) {
+  .containerProjects {
+    .navigation {
+      flex-direction: column;
+
+      button:nth-child(2) {
+        align-self: end;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 690px) {
+  .containerProjects {
+    .projectDisplay {
+      grid-template-rows: 1fr 3fr 1fr;
+      grid-template-columns: 1fr;
+      height: 80vh;
+      margin: 0px 30px;
+    }
+
+    h2 {
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .side {
+      grid-template-rows: 1fr;
+      gap: 10px;
+    }
+
+    a, button, .projectCounter {
+      font-size: 0.8rem;
+    }
+
+    .navigation {
+      flex-direction: row;
+    }
+  }
+
+}
