@@ -1,4 +1,4 @@
-container {
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* Two equal columns */
@@ -10,7 +10,7 @@ container {
     "slider slider";
   gap: 20px;
   padding: 0px 20px;
-  /* Increased top padding */
+  /* Adjust padding */
   position: relative;
 }
 
@@ -22,41 +22,30 @@ container {
   font-family: 'Orbitron', sans-serif;
 }
 
-
+/* Details Section */
 .detailsSection {
   grid-area: details;
   padding: 10px;
   text-align: left;
-  /* Set text alignment to the left */
   position: relative;
   font-family: 'Space Grotesk', sans-serif;
-  /* Set the font family */
   font-size: 24px;
-  /* Set the font size */
   color: #7D8690;
-  /* Set the color */
 }
 
 /* Label styling (Location, Completion Date, Sector) */
 .label {
   display: inline-block;
-  /* Allows space between label and value */
   width: 50%;
-  /* Adjust the width to control label positioning */
   text-align: left;
-  /* Align labels to the left */
 }
 
 /* Value styling */
 .value {
   display: inline-block;
-  /* Allows space between label and value */
   width: 50%;
-  /* Adjust the width to control value positioning */
   text-align: right;
-  /* Align values to the right */
   color: black;
-  /* Set the color for values */
 }
 
 /* Description Section */
@@ -80,13 +69,12 @@ container {
 .photoGallery {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 10px; */
   background-color: #DFDFDA;
   padding-top: 40px;
   width: 100vw;
   padding-bottom: 40px;
   margin-left: calc(-50vw + 50%);
-  gap: 40px
+  gap: 40px;
 }
 
 .photoGallery img:first-child {
@@ -96,8 +84,6 @@ container {
 .photoGallery img {
   width: 300px;
   height: auto;
-
-
 }
 
 /* Top horizontal line */
@@ -109,7 +95,6 @@ container {
   right: 0;
   height: 1px;
   background-color: #007AFF;
-  /* height: calc(100% - 60px); */
 }
 
 /* Middle horizontal line */
@@ -120,7 +105,7 @@ container {
   /* Adjust to position the line */
   left: 0;
   right: 40%;
-  /* Shorten the line from the right-hand side by 50px */
+  /* Shorten the line from the right-hand side */
   height: 1px;
   background-color: #007AFF;
 }
@@ -130,7 +115,8 @@ container {
   content: "";
   position: absolute;
   top: 0;
-  bottom: +400px;
+  bottom: 400px;
+  /* Adjusted to stop before the photo padding */
   left: 50%;
   width: 1px;
   background-color: #007AFF;
@@ -141,5 +127,3 @@ h1 {
   text-align: center;
   vertical-align: middle;
 }
-
-/* Custom horizontal line between title and details */
