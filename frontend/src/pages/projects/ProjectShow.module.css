@@ -1,0 +1,129 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* Two equal columns */
+  grid-template-rows: auto auto auto;
+  /* Three rows: title/details, description, slider */
+  grid-template-areas:
+    "title details"
+    "description description"
+    "slider slider";
+  gap: 20px;
+  padding: 0px 20px;
+  /* Adjust padding */
+  position: relative;
+}
+
+/* Title Section */
+.titleSection {
+  grid-area: title;
+  position: relative;
+  font-size: 2rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Details Section */
+.detailsSection {
+  grid-area: details;
+  padding: 10px;
+  text-align: left;
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  color: #7D8690;
+}
+
+/* Label styling (Location, Completion Date, Sector) */
+.label {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+}
+
+/* Value styling */
+.value {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+  color: black;
+}
+
+/* Description Section */
+.descriptionSection {
+  grid-area: description;
+  padding: 10px;
+  column-count: 2;
+  column-gap: 20px;
+  position: relative;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Slider Section */
+.sliderSection {
+  grid-area: slider;
+  padding: 40px 0;
+}
+
+.photoGallery {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #DFDFDA;
+  padding-top: 40px;
+  width: 100vw;
+  padding-bottom: 40px;
+  margin-left: calc(-50vw + 50%);
+  gap: 40px;
+}
+
+.photoGallery img:first-child {
+  padding-left: 40px;
+}
+
+.photoGallery img {
+  width: 300px;
+  height: auto;
+}
+
+/* Top horizontal line */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #007AFF;
+}
+
+/* Middle horizontal line */
+.descriptionSection::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  /* Adjust to position the line */
+  left: 0;
+  right: 40%;
+  /* Shorten the line from the right-hand side */
+  height: 1px;
+  background-color: #007AFF;
+}
+
+/* Vertical line */
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 400px;
+  /* Adjusted to stop before the photo padding */
+  left: 50%;
+  width: 1px;
+  background-color: #007AFF;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  vertical-align: middle;
+}
