@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Kent Projects",
-    "description": "A major construction project in Kent, UK, involving multiple residential and commercial buildings.",
+    "description": "A major construction project in Kent, UK, involving multiple residential and commercial buildings. This project includes the development of high-rise apartments, retail spaces, and infrastructure upgrades. The scope of work extends to road network improvements, landscaping, and the installation of utilities. The team is working on creating a pedestrian-friendly environment with green spaces and community facilities. Additional elements include the construction of underground parking, security systems, and recreational areas for residents. This large-scale development aims to enhance urban living while prioritizing sustainability, energy efficiency, and modern architectural aesthetics.",
     "location": "Kent, UK",
     "completionDate": "2025-12-01",
     "sector": "Construction",
@@ -10,6 +10,7 @@
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D",
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D"
     ]
+
   },
   {
     "id": 2,
