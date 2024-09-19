@@ -8,5 +8,7 @@
     font-size: 24px; 
     position: relative;
     white-space: nowrap; 
+    text-align: center;
+    width: 100%;
   }
   
