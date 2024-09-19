@@ -75,45 +75,24 @@
 .reviewContainer {
   width: 100%;
   height: auto;
-  overflow-y: scroll; /* Always show the scrollbar */
-  scrollbar-width: thin; /* Firefox: Thin scrollbar */
-  scrollbar-color: var(--bg) var(--blue); /* Firefox: Thumb and track colors */
-  scrollbar-gutter: stable; /* Firefox: Reserve space for scrollbar */
   position: relative;
 }
 
-/* WebKit Browsers (Chrome, Safari, Edge) */
-.reviewContainer::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .reviewContainer .review {
+    flex-basis: calc(50% - 20px); /* Two items per row for tablets */
+  }
 }
 
-.reviewContainer::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #F5F5F5;
-}
-
-.reviewContainer::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #555;
-}
-
-
-@media (max-width: 700px) {
-
+@media (max-width: 768px) {
   .reviewContainer {
-    flex-direction: row;
-    overflow: scroll;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
   }
-
-  .reviewSection {
-    height: auto;
+  
+  .reviewContainer .review {
+    flex-basis: 100%; /* One item per row on smaller screens */
+    margin-bottom: 20px;
   }
-
 }
