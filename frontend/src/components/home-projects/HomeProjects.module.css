@@ -62,3 +62,27 @@
     background: #b30000;
   }
 }
+
+
+/* HomeProjects.module.css */
+
+/* Container for all projects */
+.projects {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+}
+
+/* Each project item */
+.project {
+  min-width: 400px; /* Adjust for non-mobile */
+  scroll-snap-align: center; /* Snap each project to the center */
+  margin: 0 10px; /* Add spacing between items */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .project {
+    min-width: 100%; /* Make each project occupy full width of the container */
+  }
+}

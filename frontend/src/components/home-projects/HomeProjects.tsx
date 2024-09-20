@@ -89,16 +89,16 @@ const projects = [
               style={{
                 backgroundImage: `url(${project.src})`,
                 height: '300px',
-                width: '400px',
-                backgroundAttachment: 'fixed',
+                // width: '400px',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
+                margin: '20px',
               }}
             />
             <div className={styles.projectInfo}
               style={{
-                transform: `translate(${offsetX * 0.11}px, ${offsetY * 0.2}px)`,
+                transform: `translate(${offsetX * 0.05}px, ${offsetY * 0.1}px)`,
                 transition: 'transform 0.2s ease-out',
               }}
             >
@@ -108,14 +108,15 @@ const projects = [
         ))}
       </div>
 
-      <div className={styles.gliderScrollbar}>
+      {/* <div className={styles.gliderScrollbar}>
         <div
           className={styles.gliderScrollbarHandle}
           style={{
             transform: `translateX(${offsetX * (8 / projects.length)}%)`,
+            margin: '0px 20px',
           }}
         ></div>
-      </div>
+      </div> */}
     </div>
   );
 };
