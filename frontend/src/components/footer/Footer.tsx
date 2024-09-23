@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.about}>
-          <div className={styles.title}>About Us</div>
+          <div className={styles.title}>Who We Are</div>
           <div className={styles.about_text}>
             APT is a construction agency that specializes in rail, civil and
             optic fibre, located in Midlands, United Kingdom.
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.git}>
-          <div className={styles.title}>Get In Touch</div>
+          <div className={styles.title}>Find Us Here </div>
 
           <div className={styles.git_container}>
             <div className={styles.git_component}>
