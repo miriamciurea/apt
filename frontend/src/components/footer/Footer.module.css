@@ -40,10 +40,7 @@ footer {
   color: var(--blue);
 }
 
-.title:hover {
-  color: rgb(56, 158, 193);
-  cursor: pointer;
-}
+
 
 .copyright {
   color: black;
@@ -64,10 +61,6 @@ footer {
   color: var(--blue);
 }
 
-.iconstyles span:hover {
-  color: rgb(56, 158, 193);
-  cursor: pointer;
-}
 
 .pages_list {
   display: flex;
