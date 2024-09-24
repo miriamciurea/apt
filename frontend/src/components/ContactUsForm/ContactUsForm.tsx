@@ -1,9 +1,17 @@
 import { useState } from "react";
 import styles from "./ContcactUsForm.module.css";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
+import LottieAnimation from "../dotie/LottieAnimation";
+import team from "../../lotties/team.json";
 
 interface FormData {
   name: string;
-  company: string;
   email: string;
   phone: string;
   interest: string;
@@ -19,7 +27,6 @@ interface FormDataErrors {
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
-    company: "",
     email: "",
     phone: "",
     interest: "",
@@ -63,133 +70,103 @@ const ContactForm = () => {
 
     if (!formErrors.name && !formErrors.email && !formErrors.phone) {
       try {
-        const response = await fetch('http://localhost:5001/api/getintouch', {
-          method: 'POST',
+        const response = await fetch("http://localhost:5001/api/getintouch", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         });
 
         if (response.ok) {
-          console.log('Form submitted successfully');
+          console.log("Form submitted successfully");
         } else {
-          console.error('Form submission failed');
+          console.error("Form submission failed");
         }
       } catch (error) {
-        console.error('Error submitting form:', error);
+        console.error("Error submitting form:", error);
       }
     }
   };
 
-
-
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Let's get started.</h2>
-      <form onSubmit={handleSubmit} className={styles.formContainer}>
-        <div className={styles.formGroup}>
-          <label htmlFor="name" className={styles.label}>
-            Name<span>*</span>
-          </label>
-          <input
-            type="text"
-            id="name"
+      <div className={styles.sectionsContainer}>
+        <h2 className={styles.title}>Let's get started.</h2>
+        <div className={styles.formContainer}>
+          <TextField
+            key="name-field"
+            label="Name"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`${styles.input} ${
-              errors.name ? styles.inputError : ""
-            }`}
+            error={Boolean(errors.name)}
+            helperText={errors.name}
+            classes={{ root: styles.textFieldRoot }}
           />
-          {errors.name && <p className={styles.errorMessage}>{errors.name}</p>}
-        </div>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="company" className={styles.label}>
-            Company
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleInputChange}
-            className={styles.input}
-          />
-        </div>
-
-        <div className={styles.formGroup}>
-          <label htmlFor="email" className={styles.label}>
-            Email<span>*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
+          <TextField
+            key="email-field"
+            label="Email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`${styles.input} ${
-              errors.email ? styles.inputError : ""
-            }`}
+            error={Boolean(errors.email)}
+            helperText={errors.email}
+            className={styles.textField}
+            classes={{ root: styles.textFieldRoot }}
           />
-          {errors.email && (
-            <p className={styles.errorMessage}>{errors.email}</p>
-          )}
-        </div>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="phone" className={styles.label}>
-            Phone<span>*</span>
-          </label>
-          <input
-            type="tel"
-            id="phone"
+          <TextField
+            key="phone-field"
+            label="Phone"
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            className={`${styles.input} ${
-              errors.phone ? styles.inputError : ""
-            }`}
+            error={Boolean(errors.phone)}
+            helperText={errors.phone}
+            className={styles.textField}
+            classes={{ root: styles.textFieldRoot }}
           />
-          {errors.phone && (
-            <p className={styles.errorMessage}>{errors.phone}</p>
-          )}
-        </div>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="interest" className={styles.label}>
-            I'm Interested In ...
-          </label>
-          <input
-            type="text"
-            id="interest"
-            name="interest"
-            value={formData.interest}
-            onChange={handleInputChange}
-            className={styles.input}
-          />
-        </div>
+          <FormControl fullWidth classes={{ root: styles.selectRoot }}>
+            <InputLabel id="simple-select">I'm Interested In ...</InputLabel>
+            <Select
+              labelId="simple-select-label"
+              id="simple-select"
+              label="I'm Interested In ..."
+              value={formData.interest}
+              onChange={handleInputChange}
+              name="interest"
+            >
+              <MenuItem value={"rail"}>Rail</MenuItem>
+              <MenuItem value={"construction"}>Construction</MenuItem>
+              <MenuItem value={"optic-fibre"}>Optic Fibre</MenuItem>
+            </Select>
+          </FormControl>
 
-        <div className={styles.formGroup}>
-          <label htmlFor="moreInfo" className={styles.label}>
-            More information
-          </label>
-          <textarea
-            id="moreInfo"
+          <TextField
+            key="more-info-field"
+            label="More information"
             name="moreInfo"
             value={formData.moreInfo}
             onChange={handleInputChange}
-            className={styles.textarea}
+            multiline
+            rows={4}
+            className={styles.textField}
+            classes={{ root: styles.textFieldRoot }}
           />
-        </div>
 
-        <div className={styles.formGroup}>
-          <button type="submit" className={styles.button}>
+          <button
+            type="submit"
+            className={styles.button}
+            onClick={handleSubmit}
+          >
             SEND
           </button>
         </div>
-      </form>
+      </div>
+      <LottieAnimation animation={team} width={500} height={500} margin="0" />
     </div>
   );
 };
