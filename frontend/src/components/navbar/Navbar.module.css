@@ -12,9 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg);
   padding: 10px 20px;
-  background-color: var(--white);
+  background-color: var(--bg);
 }
 
 .logoLink {
@@ -132,13 +131,13 @@
   .navList {
     display: none;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: var(--bg);
     /* Background color for the dropdown */
     position: absolute;
     /* Position it absolutely */
     top: 60px;
     /* Adjust this value to position below the navbar */
-    right: 20px;
+    right: 0px;
     /* Align it to the right */
     width: 100%;
     /* Adjust the width as needed */

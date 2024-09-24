@@ -50,7 +50,7 @@ const Slider: React.FC = () => {
           </div>
           <div className={styles.link}>
             <a href="your-link-url" className={styles.homeLink}>
-              Learn More About Our Career Opportunities &gt;&gt;
+              Our Career Opportunities &gt;&gt;
             </a>
           </div>
         </div>
