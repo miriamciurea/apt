@@ -1,13 +1,14 @@
 import { useState } from "react";
 import styles from "./ContcactUsForm.module.css";
 import {
-  Button,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
   TextField,
 } from "@mui/material";
+import LottieAnimation from "../dotie/LottieAnimation";
+import team from "../../lotties/team.json";
 
 interface FormData {
   name: string;
@@ -90,80 +91,82 @@ const ContactForm = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Let's get started.</h2>
-      <div className={styles.formContainer}>
-        <TextField
-          key="name-field"
-          label="Name"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          error={Boolean(errors.name)}
-          helperText={errors.name}
-          classes={{ root: styles.textFieldRoot }}
-        />
-
-        <TextField
-          key="email-field"
-          label="Email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          error={Boolean(errors.email)}
-          helperText={errors.email}
-          className={styles.textField}
-          classes={{ root: styles.textFieldRoot }}
-        />
-
-        <TextField
-          key="phone-field"
-          label="Phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleInputChange}
-          error={Boolean(errors.phone)}
-          helperText={errors.phone}
-          className={styles.textField}
-          classes={{ root: styles.textFieldRoot }}
-        />
-
-        <FormControl fullWidth classes={{ root: styles.selectRoot }}>
-          <InputLabel id="simple-select">I'm Interested In ...</InputLabel>
-          <Select
-            labelId="simple-select-label"
-            id="simple-select"
-            label="I'm Interested In ..."
-            value={formData.interest}
+      <div className={styles.sectionsContainer}>
+        <h2 className={styles.title}>Let's get started.</h2>
+        <div className={styles.formContainer}>
+          <TextField
+            key="name-field"
+            label="Name"
+            name="name"
+            value={formData.name}
             onChange={handleInputChange}
-            name="interest"
+            error={Boolean(errors.name)}
+            helperText={errors.name}
+            classes={{ root: styles.textFieldRoot }}
+          />
+
+          <TextField
+            key="email-field"
+            label="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            error={Boolean(errors.email)}
+            helperText={errors.email}
+            className={styles.textField}
+            classes={{ root: styles.textFieldRoot }}
+          />
+
+          <TextField
+            key="phone-field"
+            label="Phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleInputChange}
+            error={Boolean(errors.phone)}
+            helperText={errors.phone}
+            className={styles.textField}
+            classes={{ root: styles.textFieldRoot }}
+          />
+
+          <FormControl fullWidth classes={{ root: styles.selectRoot }}>
+            <InputLabel id="simple-select">I'm Interested In ...</InputLabel>
+            <Select
+              labelId="simple-select-label"
+              id="simple-select"
+              label="I'm Interested In ..."
+              value={formData.interest}
+              onChange={handleInputChange}
+              name="interest"
+            >
+              <MenuItem value={"rail"}>Rail</MenuItem>
+              <MenuItem value={"construction"}>Construction</MenuItem>
+              <MenuItem value={"optic-fibre"}>Optic Fibre</MenuItem>
+            </Select>
+          </FormControl>
+
+          <TextField
+            key="more-info-field"
+            label="More information"
+            name="moreInfo"
+            value={formData.moreInfo}
+            onChange={handleInputChange}
+            multiline
+            rows={4}
+            className={styles.textField}
+            classes={{ root: styles.textFieldRoot }}
+          />
+
+          <button
+            type="submit"
+            className={styles.button}
+            onClick={handleSubmit}
           >
-            <MenuItem value={"rail"}>Rail</MenuItem>
-            <MenuItem value={"construction"}>Construction</MenuItem>
-            <MenuItem value={"optic-fibre"}>Optic Fibre</MenuItem>
-          </Select>
-        </FormControl>
-
-        <TextField
-          key="more-info-field"
-          label="More information"
-          name="moreInfo"
-          value={formData.moreInfo}
-          onChange={handleInputChange}
-          multiline
-          rows={4}
-          className={styles.textField}
-          classes={{ root: styles.textFieldRoot }}
-        />
-
-        <Button
-          key="button"
-          variant="contained"
-          sx={{ alignSelf: "center", width: "100px", margin: "50px 0" }}
-          onClick={handleSubmit}
-        >
-          SEND
-        </Button>
+            SEND
+          </button>
+        </div>
       </div>
+      <LottieAnimation animation={team} width={500} height={500} margin="0" />
     </div>
   );
 };
