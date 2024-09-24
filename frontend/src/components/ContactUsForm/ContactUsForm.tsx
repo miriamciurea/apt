@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./ContcactUsForm.module.css"; // Importing CSS Module
+import styles from "./ContcactUsForm.module.css";
 
 interface FormData {
   name: string;
@@ -37,8 +37,10 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submission triggered");
+
     const formErrors = {
       name: "",
       email: "",
@@ -53,17 +55,34 @@ const ContactForm = () => {
       formErrors.email = "Email is required";
     }
 
-    if (!formData.interest) {
+    if (!formData.phone) {
       formErrors.phone = "Phone is required";
     }
 
     setErrors(formErrors);
 
-    if (Object.keys(formErrors).length === 0) {
-      console.log("Form submitted:", formData);
-      // Perform form submission logic here (e.g., send data to the server)
+    if (!formErrors.name && !formErrors.email && !formErrors.phone) {
+      try {
+        const response = await fetch('http://localhost:5001/api/getintouch', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          console.log('Form submitted successfully');
+        } else {
+          console.error('Form submission failed');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+      }
     }
   };
+
+
 
   return (
     <div className={styles.container}>
