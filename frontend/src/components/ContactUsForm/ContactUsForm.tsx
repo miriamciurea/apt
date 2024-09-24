@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./ContcactUsForm.module.css"; // Importing CSS Module
+import styles from "./ContcactUsForm.module.css";
 
 interface FormData {
   name: string;
@@ -37,33 +37,6 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const formErrors = {
-  //     name: "",
-  //     email: "",
-  //     phone: "",
-  //   };
-
-  //   if (!formData.name) {
-  //     formErrors.name = "Name is required";
-  //   }
-
-  //   if (!formData.email) {
-  //     formErrors.email = "Email is required";
-  //   }
-
-  //   if (!formData.interest) {
-  //     formErrors.phone = "Phone is required";
-  //   }
-
-  //   setErrors(formErrors);
-
-  //   if (Object.keys(formErrors).length === 0) {
-  //     console.log("Form submitted:", formData);
-  //   }
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submission triggered");
@@ -74,7 +47,6 @@ const ContactForm = () => {
       phone: "",
     };
 
-    // Validate required fields
     if (!formData.name) {
       formErrors.name = "Name is required";
     }
