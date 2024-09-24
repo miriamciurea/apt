@@ -1,1 +1,1 @@
-web: npm run start backend
+web: npm --prefix backend run start
