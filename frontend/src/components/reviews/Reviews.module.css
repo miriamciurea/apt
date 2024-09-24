@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&family=Space+Grotesk:wght@400&display=swap');
 
 .reviewSection {
-  background-color: #DFDFDA;
+  background-color: var(--white);
   /* Background color */
   padding: 20px;
   /* Padding around the section */
@@ -90,7 +90,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .reviewContainer .review {
     flex-basis: 100%; /* One item per row on smaller screens */
     margin-bottom: 20px;
