@@ -49,10 +49,9 @@
     "fill-range": "^7.1.1",
     "finalhandler": "^1.2.0",
     "form-data": "^2.5.1",
-    "formidable": "^1.2.6",
+    "formidable": "^3.5.1",
     "forwarded": "^0.2.0",
     "fresh": "^0.5.2",
-    "fsevents": "^2.3.3",
     "function-bind": "^1.1.2",
     "get-intrinsic": "^1.2.4",
     "glob-parent": "^5.1.2",
@@ -151,6 +150,13 @@
     "start": "node backend/index.js",
     "dev": "nodemon backend/src/index.ts",
     "build": "tsc"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.3"
+  },
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
   },
   "keywords": [],
   "author": "CIURIX",
