@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               </div>
 
               <div className={styles.git_text}>
-                267 Burnt Oak, Broadway, HA8 5ED
+                582 Honeypot Lane, HA7 1JS
               </div>
             </div>
 
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                 <span className="material-symbols-outlined">call</span>
               </div>
 
-              <div className={styles.git_text}>12345678909</div>
+              <div className={styles.git_text}>+447977763028</div>
             </div>
           </div>
         </div>
