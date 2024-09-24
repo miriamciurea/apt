@@ -1,6 +1,4 @@
 
-
-
 [
   {
   "id": 1,
@@ -28,39 +26,67 @@
 
 
   {
-    "id": 2,
-    "name": "Build Works",
-    "description": "An extensive construction site in the US featuring state-of-the-art facilities.",
-    "location": "US",
-    "completionDate": "2024-08-15",
-    "sector": "Optic Fiber",
-    "photos": [
-      "https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D",
-      "https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D"
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Kent Projects",
-    "description": "A major construction project in Kent, UK, involving multiple residential and commercial buildings.",
-    "location": "Kent, UK",
-    "completionDate": "2025-12-01",
-    "sector": "Construction",
-    "photos": [
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D",
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D"
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Build Works",
-    "description": "An extensive construction site in the US featuring state-of-the-art facilities.",
-    "location": "US",
-    "completionDate": "2024-08-15",
-    "sector": "Construction",
-    "photos": [
-      "https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D",
-      "https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D"
-    ]
-  }
+  "id": 2,
+  "name": "NWEP Phase 3 Cable Containment",
+  "description": "APT were contracted to install 15km of cable containment throughout the North West Electrification phase 4 project.\n\nScope of Work:\n- Installation of raised GRP troughing.\n- Wall-tied tunnel and bridge containment.\n- TTS ground-laid troughing.\n\nThe majority of the works were completed during short night-time possessions, with our in-house road rail plant delivering materials across the project site. Our team worked in strict adherence to Health & Safety regulations, ensuring a safe environment for all. Programming and planning large teams and equipment was essential in completing the project on time and within budget.\n\nKey Stats:\n- 15km of cable containment installed.\n- Delivered within the budget.\n- Project completed on time between July 2017 and October 2018.",
+  "location": "Manchester – Euxton Jcn",
+  "completionDate": "October 2018",
+  "sector": "Rails",
+  "client": "Murphy",
+  "quote": "Installation of 15km of cable containment throughout NWEP phase 4",
+  "dates": "July 2017 – October 2018",
+  "value": "£2.5 Million",
+  "photos": [
+  "/images/n2.jpeg",
+  "/images/n1.jpeg"
+  ]
+},
+
+{
+  "id": 3,
+  "name": "North West Electrification Boundary Fencing",
+  "description": "Pod-Trak were contracted to install over 3km of palisade boundary fencing as part of the North West Electrification Phase 3 project.\n\nScope of Work:\n- Installation of 1.8m high palisade fencing along the Network Rail boundary.\n- Works conducted in stages between Blackpool and Preston during the completion of the North West Electrification project.\n- Use of rope access in challenging locations to install fencing at height.\n- Materials were delivered throughout the route using our in-house plant.\n\nKey Achievements:\n- Strict adherence to Health & Safety regulations, ensuring a safe environment for both workers and the public.\n- Project completed within budget and on time, between February 2018 and January 2019.",
+  "location": "Blackpool - Preston",
+  "completionDate": "January 2019",
+  "sector": "Rails",
+  "client": "Volker Rail",
+  "quote": "Boundary fencing",
+  "dates": "February 2018 – January 2019",
+  "value": "£1 Million",
+  "photos": [
+    "/images/f2.jpeg",
+    "/images/f1.jpeg"
+  ]
+},
+{
+  "id": 4,
+  "name": "Switching Access and Stairways",
+  "description": "APT was contracted to complete the installation of safe access to allow staff to reach overhead line switching equipment across the North West Electrification Phase 3 and 4 projects.\n\nScope of Work:\n- Construction of access stairways and walkways throughout the NWEP, providing seamless and secure access to critical switching points between Blackpool and Manchester.\n- All works were carried out midweek, minimizing disruption to rail services and ensuring continuous project flow.\n- Use of bespoke construction techniques, allowing our teams to safely navigate and install in complex rail environments.\n\nKey Achievements:\n- Delivered within a tight timeframe from July 2018 to December 2018, meeting all project milestones.\n- Rigorous adherence to Health & Safety regulations ensured a zero-incident project, further strengthening our reputation for safe, efficient project delivery.\n- The project was completed on budget at £300k, showcasing our commitment to cost-effective solutions.\n\nAPT’s ability to work in challenging environments, coupled with the satisfaction of the project’s completion, resulted in positive feedback and paved the way for further opportunities.",
+  "location": "Blackpool & Manchester",
+  "completionDate": "December 2018",
+  "sector": "Rails",
+  "quote": "Switching access and stairways",
+  "dates": "July 2018 – December 2018",
+  "value": "£300k",
+  "photos": [
+    "/images/sw1.jpeg",
+    "/images/sw2.jpeg"
+  ]
+},
+{
+  "id": 5,
+  "name": "Blackpool Lighting Walkway",
+  "description": "APT was contracted to complete the installation of a lighting walkway in Blackpool. The project involved providing safe, well-lit access to critical areas of the railway infrastructure.\n\nScope of Work:\n- Installation of energy-efficient lighting along key pathways, ensuring safety and accessibility for staff and passengers.\n- All work was performed during tight night-time schedules to avoid disruption to railway operations.\n- The project involved bespoke construction techniques to navigate complex rail environments and install lighting fixtures safely and securely.\n\nKey Achievements:\n- Delivered on time and within budget, with the project completed between June 2019 and October 2019.\n- Strict adherence to Health & Safety regulations, resulting in a zero-incident project.\n\nAPT’s ability to deliver in challenging environments, coupled with a strong commitment to Health & Safety, made this project a success and strengthened our partnership with the client.",
+  "location": "Blackpool",
+  "completionDate": "October 2019",
+  "sector": "Rails",
+  "quote": "Installation of lighting walkway in Blackpool",
+  "dates": "June 2019 – October 2019",
+  "value": "£1 Million",
+  "photos": [
+    "/images/b1.jpeg",
+    "/images/b2.jpeg"
+  ]
+}
+
 ]
