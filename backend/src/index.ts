@@ -2,8 +2,18 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors, { CorsOptions } from 'cors';  // Import cors with its types
 import dotenv from 'dotenv';
 import contactRoutes from './routes/contact';
+import helmet from 'helmet';
+import compression from 'compression';
 
 dotenv.config();  // Load environment variables
+
+// deployment
+
+const path = require('path');
+
+
+
+// deployment
 
 const app = express();
 
@@ -14,6 +24,12 @@ const corsOptions: CorsOptions = {
   allowedHeaders: ['Content-Type'],
   credentials: true,  // If you need to send cookies or HTTP credentials
 };
+
+// Add security headers to requests using Helmet
+app.use(helmet());
+
+// Enable response compression using Compression middleware
+app.use(compression());
 
 // Use CORS with the options
 app.use(cors(corsOptions));
