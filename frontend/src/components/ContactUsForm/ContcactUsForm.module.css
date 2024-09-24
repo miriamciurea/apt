@@ -1,20 +1,36 @@
 .formContainer {
-    max-width: 600px;
-  }
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+
+.textFieldRoot {
+  width: 100%;
+  margin: 15px 0 !important
+}
+
+.selectRoot {
+  margin: 15px 0 !important
+}
+
 
 .container {
     width: 100%;
-    margin: 0;
-    padding: 20px 100px;
+    height: 100%;
+    padding-top: 20px;
     background-color: #f5f5f5;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
   }
   
   .title {
     font-family: 'Orbitron', sans-serif;
     font-size: 24px;
-    text-align: left;
-    margin-bottom: 20px;
   }
   
   .formGroup {
@@ -78,13 +94,41 @@
     color: #fff;
   }
   
-  @media (max-width: 600px) {
-    .formContainer {
-      padding: 10px;
-    }
-  
-    .button {
-      width: 100%;
-    }
+  /* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px 50px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+    text-align: center; /* Center title on smaller screens */
+  }
+
+  .formContainer {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .button {
+    width: 100%;
+    margin: 20px 0; /* Reduce margin for smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .button {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .input, .textarea {
+    font-size: 12px;
+  }
+}
