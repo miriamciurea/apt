@@ -41,6 +41,13 @@
       "@pages/*": ["pages/*"]
     }
   },
-  "include": ["src", "types"],  // Ensure your source folder and any type declarations are included
+  "include": [
+    "src",
+    "types",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.css",
+    "src/**/*.json",
+    "src/**/*.module.css"],  // Ensure your source folder and any type declarations are included
   "exclude": ["node_modules"]
 }
