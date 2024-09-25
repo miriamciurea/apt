@@ -28,7 +28,7 @@
 }
 .iconsContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   /* Space out the icons evenly */
   flex-wrap: wrap;
   /* Allow icons to wrap to the next line if needed */
