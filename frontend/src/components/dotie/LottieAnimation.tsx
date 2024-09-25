@@ -2,9 +2,9 @@ import Lottie from "react-lottie-player";
 
 type LottieAnimationProps = {
   animation: { ["default"]: object } | object;
-  width: number;
-  height: number;
-  margin: string;
+  width?: number;
+  height?: number;
+  margin?: string;
 };
 
 const LottieAnimation = ({
