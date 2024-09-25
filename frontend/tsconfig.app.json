@@ -36,7 +36,7 @@
     "src/**/*.json",
     "src/**/*.module.css",
     "src/*",
-    "global.d.ts"
+    "src/global.d.ts"
   ],
   "exclude": ["node_modules"]
 }
