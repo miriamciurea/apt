@@ -2,7 +2,7 @@
 // import { useState } from "react";
 // import styles from "./ContactUsForm.module.css";
 import React, { useState } from "react";
-import styles from "./ContcactUsForm.module.css";
+import styles from "./ContactUsForm.module.css";
 import {
   FormControl,
   InputLabel,
@@ -11,7 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 import LottieAnimation from "../dotie/LottieAnimation";
-import team from "../../lotties/team.json";
+import team from "../../lotties/team.json"
 
 interface FormData {
   name: string;
@@ -47,7 +47,7 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submission triggered");
 

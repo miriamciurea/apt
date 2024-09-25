@@ -3,35 +3,32 @@
     "module": "ESNext",
     "target": "ES6",
     "jsx": "react-jsx",
-// <<<<<<< HEAD
-//     "strict": true,
-//     "esModuleInterop": true,
-//     "skipLibCheck": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "moduleResolution": "node",
-//     "resolveJsonModule": true,
-//     "baseUrl": "./src",
-//     "paths": {
-//       "@components/*": ["./src/components/*"],
-//       "@pages/*": ["./src/pages/*"],
-//       "*": ["./src/types/*"]
-//     },
-//     "types": [
-//       "node",
-//       "react",
-//       "react-dom",
-//       "@types/node",
-//       "@types/react",
-//       "@types/react-dom",
-//       "multer",
-//       "cors",
-//       "mime"
-//     ],
-
-// =======
-
+    //  "strict": true,
+     "esModuleInterop": true,
+     "skipLibCheck": true,
+     "forceConsistentCasingInFileNames": true,
+     "moduleResolution": "node",
+    "resolveJsonModule": true,
+     "baseUrl": "./src",
+     "paths": {
+       "@components/*": ["./src/components/*"],
+       "@pages/*": ["./src/pages/*"],
+       "*": ["./src/types/*"]
+     },
+     "types": [
+       "node",
+       "react",
+       "react-dom",
+       "@types/node",
+       "@types/react",
+       "@types/react-dom",
+       "multer",
+       "cors",
+       "mime"
+     ],
     /* Linting */
-    "strict": false,
+    // "strict": false,
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true

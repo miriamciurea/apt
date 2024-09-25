@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: 'production', // or 'production'
+  mode: 'production', // or 'development' depending on your need
   entry: './src/main.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/, // TypeScript and React files
-        use: 'ts-loader',
+        use: 'ts-loader',  // Use only ts-loader for TypeScript files
         exclude: /node_modules/,
       },
       {
@@ -20,23 +20,22 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'babel-loader',
+            loader: 'css-loader',
             options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
+              modules: true, // Enable CSS modules
             },
           },
-          'ts-loader',
         ],
       },
       {
-        test: /\.css$/, // Regular CSS
-        exclude: /\.module\.css$/,
+        test: /\.css$/, // Regular CSS (non-modules)
+        exclude: /\.module\.css$/, // Exclude CSS modules
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.css'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
   plugins: [
     new MiniCssExtractPlugin({
