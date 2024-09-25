@@ -47,4 +47,7 @@ module.exports = {
     hot: true,
   },
   devtool: 'source-map',
+  stats: {
+    errorDetails: true,
+  },
 };

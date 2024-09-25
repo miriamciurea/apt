@@ -42,7 +42,8 @@
     "src/**/*.json",
     "src/**/*.module.css",
     "src/*",
-    "src/types/global.d.ts"
+    "src/types/global.d.ts",
+    "src/**/*"
   ],
   "exclude": ["node_modules", "build"]
 }
