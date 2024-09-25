@@ -12,7 +12,8 @@
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["./src/components/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["./src/pages/*"],
+      "*": ["./src/types/*"]
     },
     "types": [
       "node",
@@ -24,7 +25,7 @@
       "multer",
       "cors",
       "mime"
-    ]
+    ],
 
   },
   "include": [
@@ -38,5 +39,5 @@
     "src/*",
     "src/types/global.d.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "build"]
 }
