@@ -1,34 +1,8 @@
-// {
-//   "compilerOptions": {
-//     "target": "ES2020",
-//     "useDefineForClassFields": true,
-//     "lib": ["ES2020", "DOM", "DOM.Iterable"],
-//     "module": "ESNext",
-//     "skipLibCheck": true,
-
-//     /* Bundler mode */
-//     "moduleResolution": "bundler",
-//     "allowImportingTsExtensions": true,
-//     "isolatedModules": true,
-//     "moduleDetection": "force",
-//     "noEmit": true,
-//     "jsx": "react-jsx",
-
-//     /* Linting */
-//     "strict": true,
-//     "noUnusedLocals": true,
-//     "noUnusedParameters": true,
-//     "noFallthroughCasesInSwitch": true
-//   },
-//   "include": ["src"]
-// }
-
-
 {
   "compilerOptions": {
     "module": "ESNext",
     "target": "ES6",
-    "jsx": "react-jsx",  // Use "react" if you're using React < 17
+    "jsx": "react-jsx",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -37,9 +11,21 @@
     "resolveJsonModule": true,
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["components/*"],
+      "@components/*": ["./src/components/*"],
       "@pages/*": ["pages/*"]
-    }
+    },
+    "types": [
+      "node",
+      "react",
+      "react-dom",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "multer",
+      "cors",
+      "mime"
+    ]
+
   },
   "include": [
     "src",
@@ -48,6 +34,7 @@
     "src/**/*.tsx",
     "src/**/*.css",
     "src/**/*.json",
-    "src/**/*.module.css"],  // Ensure your source folder and any type declarations are included
+    "src/**/*.module.css"
+  ],
   "exclude": ["node_modules"]
 }
