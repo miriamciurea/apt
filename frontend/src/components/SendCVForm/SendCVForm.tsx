@@ -61,20 +61,27 @@ const SendCVForm = () => {
 
       </div>
       <div className={styles.form}>
-        <TextField
-          key="name-field"
-          label="Your Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          sx={{ width: "400px" }}
-        />
-        <TextField
-          key="email-field"
-          label="Your Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          sx={{ width: "400px" }}
-        />
+      <TextField
+        key="name-field"
+        label="Your Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        sx={{
+          width: { xs: '100%', sm: '100%', md: '400px' },
+          maxWidth: '400px',
+        }}
+      />
+      <TextField
+        key="email-field"
+        label="Your Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        sx={{
+          width: { xs: '100%', sm: '100%', md: '400px' },
+          maxWidth: '400px',
+        }}
+/>
+
 
         <input
           key="cv-upload"
@@ -97,8 +104,8 @@ const SendCVForm = () => {
         </label>
 
 
-        <div className={styles.formGroup} style={{ width: "400px" }}>
-          <button type="submit" className={styles.button} onClick={handleSubmit} style={{ width: "100%" }}>
+        <div className={styles.formGroup} style={{ width: '100%', maxWidth: '400px' }}>
+          <button type="submit" className={styles.button} onClick={handleSubmit} style={{ width: '100%' }}>
             SEND
           </button>
         </div>
