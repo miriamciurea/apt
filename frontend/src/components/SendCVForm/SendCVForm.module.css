@@ -1,34 +1,36 @@
 .formContainer {
-    margin: 20px 50px;
-    background-color: var(--white);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 30px;
-
+  margin: 20px 50px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px;
 }
 
 .title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 28px;
-    text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 28px;
+  text-align: center;
 }
 
 .title .highlight {
-    color: #007AFF;
+  color: #007AFF;
 }
 
 .title .underlined {
-    text-decoration: underline;
- }
- .form {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    gap: 20px;
-    align-items: center;
- }
+  text-decoration: underline;
+}
 
- .button {
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.button {
   padding: 10px 20px;
   background-color: transparent;
   border: 2px solid #000;
@@ -42,4 +44,26 @@
 .button:hover {
   background-color: #000;
   color: #fff;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .formContainer {
+    margin: 20px;
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .form {
+    width: 100%;
+    padding: 0;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
 }

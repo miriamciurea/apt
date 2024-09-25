@@ -35,137 +35,74 @@
   margin-left: 1.5rem;
 }
 
+/* New Button Style */
 .navLink {
-  position: relative;
   display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
   text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
+  color: #000;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
-.learnMore {
-  width: 10rem;
-  height: auto;
-}
-
-.circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 2rem;
-  height: 2rem;
-  background: #1D2327;
-  border-radius: 1rem;
-}
-
-.icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: var(--white);
-}
-
-.arrow {
-  left: 0.5rem;
-  width: 0.875rem;
-  height: 0.1rem;
-  background: none;
-}
-
-.arrow::before {
-  position: absolute;
-  content: '';
-  top: -0.2rem;
-  right: 0.05rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-top: 0.1rem solid #fff;
-  border-right: 0.1rem solid #fff;
-  transform: rotate(45deg);
+.navLink:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 .buttonText {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.5rem 0;
-  margin: 0 0 0 1.25rem;
-  color: #1D2327;
   font-weight: 700;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
+  color: inherit;
 }
 
-.navLink:hover .circle {
-  width: 100%;
+/* Hiding unnecessary elements from the previous design */
+.circle,
+.icon,
+.arrow {
+  display: none;
 }
 
-.navLink:hover .icon.arrow {
-  background: var(--white);
-  transform: translate(1rem, 0);
-}
-
-.navLink:hover .buttonText {
-  color: var(--white);
-}
-
+/* Mobile menu icon */
 .menuIcon {
-  display: none
+  display: none;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .navList {
     display: none;
     flex-direction: column;
     background-color: var(--bg);
-    /* Background color for the dropdown */
     position: absolute;
-    /* Position it absolutely */
     top: 60px;
-    /* Adjust this value to position below the navbar */
     right: 0px;
-    /* Align it to the right */
     width: 100%;
-    /* Adjust the width as needed */
     border-radius: 0;
-    /* Optional: Add border-radius for rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
 
   .showMenu {
     display: flex;
-    /* Show the nav list when the menu is open */
   }
 
   .menuIcon {
     display: block;
-    /* Show the menu icon */
     cursor: pointer;
   }
 
   .menuIcon .fa-bars {
     font-size: 1.5rem;
-    /* Adjust icon size */
     color: var(--blue);
   }
 
-    .navItem {
-      margin: 15px 30px;
-      /* Add vertical margin to nav items */
-    }
+  .navItem {
+    margin: 15px 30px;
+  }
 }
