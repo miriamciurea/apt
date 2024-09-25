@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from './EarlyDays.module.css';
+import h1 from '../../../public/images/h1.jpeg'; // Import local images
+import h2 from '../../../public/images/h2.jpeg';
+import h3 from '../../../public/images/h3.jpeg';
+import h4 from '../../../public/images/h4.jpeg';
+
 
 const EarlyDays: React.FC = () => {
-
   return (
     <>
       <div className={styles.container}>
@@ -21,7 +25,7 @@ const EarlyDays: React.FC = () => {
             <div className={styles.photo1}>
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D"
+                  src={h1} // Swapped this to h3.jpeg
                   alt="Construction Site"
                   className="photoImage"
                 />
@@ -29,13 +33,13 @@ const EarlyDays: React.FC = () => {
 
               <div className={styles.photo}>
                 <img
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbSUyMGNvbnN0cnVjdGlvbiUyMHNpdGV8ZW58MHx8MHx8fDI%3D"
+                  src={h2} // Keeping h2 as it is
                   alt="Team Construction Site"
                   className="photoImage"
                 />
 
                 <img
-                  src="https://images.unsplash.com/photo-1593630987785-98139c5f3cc6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29uc3RydWN0aW9uJTIwc2l0ZXxlbnwwfHwwfHx8Mg%3D%3D"
+                  src={h4} // Swapped this to h1.jpeg
                   alt="Construction"
                   className="photoImage"
                   style={{
@@ -46,13 +50,11 @@ const EarlyDays: React.FC = () => {
             </div>
           </div>
 
-
           <div className={styles.contentItem2}>
-
-          <div className={styles.photo2}>
+            <div className={styles.photo2}>
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1680879221403-f19bb46fe527?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHJhaWx3YXklMjB3b3JrZXJzfGVufDB8fDB8fHwy"
+                  src={h3} // Keeping h4 as it is
                   alt="Railway Workers"
                   className="photoImage"
                   style={{
@@ -72,11 +74,7 @@ const EarlyDays: React.FC = () => {
 
       </div>
     </>
-
-  )
+  );
 }
 
-export default EarlyDays
-
-          // <div className={styles.contentPhotos}>
-          // </div>
+export default EarlyDays;

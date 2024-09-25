@@ -27,6 +27,10 @@
   justify-self: end;
 }
 
+.photoImage {
+  height: 700px;
+}
+
 
 .photo1 {
   display: flex;
@@ -34,6 +38,7 @@
   justify-content: end;
   align-items: end;
   margin-top: 10px;
+
 }
 
 .photo2 {
