@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./ContcactUsForm.module.css";
+import styles from "./ContactUsForm.module.css";
 
 interface FormData {
   name: string;
