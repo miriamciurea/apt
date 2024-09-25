@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@types/material-ui": "^0.21.17",
     "accepts": "^1.3.8",
     "acorn": "^8.12.1",
     "acorn-walk": "^8.3.4",
@@ -105,6 +106,7 @@
     "querystring": "^0.2.0",
     "range-parser": "^1.2.1",
     "raw-body": "^2.5.2",
+    "react-router-dom": "^6.26.2",
     "readable-stream": "^2.3.8",
     "readdirp": "^3.6.0",
     "safe-buffer": "^5.2.1",
