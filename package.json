@@ -144,10 +144,13 @@
     "@types/cors": "^2.8.17",
     "@types/helmet": "^0.0.48",
     "@types/multer": "^1.4.12",
+    "@types/node": "^22.7.0",
     "@types/react": "^18.3.9",
+    "@types/react-dom": "^18.3.0",
     "@types/react-icons": "^2.2.7",
     "@types/react-router-dom": "^5.3.3",
     "nodemon": "^3.1.7",
+    "react-icons": "^5.3.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
