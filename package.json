@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
+    "@lottiefiles/react-lottie-player": "^3.5.4",
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
     "@types/material-ui": "^0.21.17",
@@ -110,6 +111,7 @@
     "querystring": "^0.2.0",
     "range-parser": "^1.2.1",
     "raw-body": "^2.5.2",
+    "react-lottie-player": "^2.1.0",
     "react-router-dom": "^6.26.2",
     "readable-stream": "^2.3.8",
     "readdirp": "^3.6.0",
