@@ -11,15 +11,15 @@ const icons = [
   { iconComponent: <FaLightbulb />, text: "Innovation" },
   { iconComponent: <FaLeaf />, text: "Sustainabillity" },
   {
-    iconComponent: <FiCheckCircle className={styles.icon} />,
+    iconComponent: <FiCheckCircle />,
     text: "Certified",
   },
   {
-    iconComponent: <MdDiversity3 className={styles.icon} />,
+    iconComponent: <MdDiversity3 />,
     text: "Inclusive",
   },
   {
-    iconComponent: <FaHardHat className={styles.icon} />,
+    iconComponent: <FaHardHat />,
     text: "Safety",
   },
 ];
