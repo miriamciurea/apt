@@ -52,12 +52,35 @@ const upload = multer({ storage });
 
 
 // Define the route to handle the CV submission
-router.post('/sendcv', upload.single('cv'), async (req: Request, res: Response) => {
+// router.post('/sendcv', upload.single('cv'), async (req: Request, res: Response) => {
+//   const { name, email } = req.body;
+//   const cv = req.file;  // This will contain the uploaded file
+
+//   if (!cv) {
+//     return res.status(400).json({ error: 'CV file is required.' });
+//   }
+
+//   try {
+//     // Log file info for debugging
+//     console.log('Received form data:', { name, email });
+//     console.log('File information:', req.file);
+
+//     // Call your function to send the email with the CV as an attachment
+//     await sendCvEmail({ name, email, cv });
+//     res.status(200).json({ message: 'CV sent successfully.' });
+//   } catch (error) {
+//     console.error('Error sending CV:', error);
+//     res.status(500).json({ error: 'Internal Server Error, CV not sent.' });
+//   }
+// });
+
+router.post('/sendcv', upload.single('cv'), async (req: Request, res: Response): Promise<void> => {
   const { name, email } = req.body;
   const cv = req.file;  // This will contain the uploaded file
 
   if (!cv) {
-    return res.status(400).json({ error: 'CV file is required.' });
+    res.status(400).json({ error: 'CV file is required.' });
+    return; // Make sure to return early after sending the response
   }
 
   try {
@@ -67,6 +90,7 @@ router.post('/sendcv', upload.single('cv'), async (req: Request, res: Response) 
 
     // Call your function to send the email with the CV as an attachment
     await sendCvEmail({ name, email, cv });
+
     res.status(200).json({ message: 'CV sent successfully.' });
   } catch (error) {
     console.error('Error sending CV:', error);
