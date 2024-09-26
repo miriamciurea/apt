@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./AboutUsDescription.module.css";
 import Icon from "./Icon/Icon";
 import { FaLightbulb } from "react-icons/fa";
