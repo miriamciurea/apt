@@ -181,7 +181,7 @@
     "start": "node dist/index.js",
     "dev": "nodemon backend/src/index.ts",
     "build": "tsc",
-    "build-all": "npm --prefix frontend run build && npm --prefix backend run build",
+    "build-all": "npm --prefix frontend install babel-loader npm --prefix frontend run build && npm --prefix backend run build",
     "start-all": "npm --prefix backend run start"
   },
   "optionalDependencies": {
