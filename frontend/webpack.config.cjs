@@ -131,4 +131,7 @@ module.exports = {
     hot: true,
   },
   devtool: 'source-map',
+  cache: {
+    type: 'filesystem',
+  }
 };
