@@ -182,8 +182,7 @@
     "dev": "nodemon backend/src/index.ts",
     "build": "tsc",
     "build-all": "npm --prefix frontend run build && npm --prefix backend run build",
-    "start-all": "npm --prefix backend run start",
-    "heroku-postbuild": "npm --prefix frontend run build && npm --prefix backend run build"
+    "start-all": "npm --prefix backend run start"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.3"
