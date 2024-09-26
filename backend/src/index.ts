@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors, { CorsOptions } from 'cors';  // Import cors with its types
 import dotenv from 'dotenv';
 import contactRoutes from './routes/contact';
+// const contactRoutes = require('./routes/contact.ts');
 import helmet from 'helmet';
 import compression from 'compression';
 
