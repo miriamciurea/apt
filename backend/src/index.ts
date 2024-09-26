@@ -40,6 +40,12 @@ app.options('*', cors(corsOptions));
 // Middleware to parse incoming JSON requests
 app.use(express.json());
 
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
+});
+
 // Use the contact form routes
 app.use('/api', contactRoutes);  // '/api/getintouch' will now hit your route
 
