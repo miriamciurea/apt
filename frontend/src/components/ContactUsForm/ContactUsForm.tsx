@@ -3,6 +3,8 @@
 // import styles from "./ContactUsForm.module.css";
 import React, { useState } from "react";
 import styles from "./ContactUsForm.module.css";
+import { SelectChangeEvent } from '@mui/material/Select';
+
 import {
   FormControl,
   InputLabel,
@@ -42,12 +44,26 @@ const ContactForm = () => {
     phone: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+  // const handleInputChange = (e: SelectChangeEvent<string>) => {
+  //   const { name, value } = e.target;
+  //   // setFormData({ ...formData, [name]: value });
+  //   setFormData(prevData => ({ ...prevData, [name]: value }));
+  // };
+
+
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | SelectChangeEvent<string>
+  ) => {
+    // Type guard to check if event is a SelectChangeEvent
+    if ('target' in event && 'name' in event.target) {
+      const { name, value } = event.target;
+
+      // Update your form data
+      setFormData(prevData => ({ ...prevData, [name]: value }));
+    }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submission triggered");
 
@@ -96,78 +112,80 @@ const ContactForm = () => {
     <div className={styles.container}>
       <div className={styles.sectionsContainer}>
         <h2 className={styles.title}>Let's get started.</h2>
-        <div className={styles.formContainer}>
-          <TextField
-            key="name-field"
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            error={Boolean(errors.name)}
-            helperText={errors.name}
-            classes={{ root: styles.textFieldRoot }}
-          />
-
-          <TextField
-            key="email-field"
-            label="Email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            error={Boolean(errors.email)}
-            helperText={errors.email}
-            className={styles.textField}
-            classes={{ root: styles.textFieldRoot }}
-          />
-
-          <TextField
-            key="phone-field"
-            label="Phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            error={Boolean(errors.phone)}
-            helperText={errors.phone}
-            className={styles.textField}
-            classes={{ root: styles.textFieldRoot }}
-          />
-
-          <FormControl fullWidth classes={{ root: styles.selectRoot }}>
-            <InputLabel id="simple-select">I'm Interested In ...</InputLabel>
-            <Select
-              labelId="simple-select-label"
-              id="simple-select"
-              label="I'm Interested In ..."
-              value={formData.interest}
+        <form onSubmit={handleSubmit}>
+          <div className={styles.formContainer}>
+            <TextField
+              key="name-field"
+              label="Name"
+              name="name"
+              value={formData.name}
               onChange={handleInputChange}
-              name="interest"
+              error={Boolean(errors.name)}
+              helperText={errors.name}
+              classes={{ root: styles.textFieldRoot }}
+            />
+
+            <TextField
+              key="email-field"
+              label="Email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              error={Boolean(errors.email)}
+              helperText={errors.email}
+              className={styles.textField}
+              classes={{ root: styles.textFieldRoot }}
+            />
+
+            <TextField
+              key="phone-field"
+              label="Phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              error={Boolean(errors.phone)}
+              helperText={errors.phone}
+              className={styles.textField}
+              classes={{ root: styles.textFieldRoot }}
+            />
+
+            <FormControl fullWidth classes={{ root: styles.selectRoot }}>
+              <InputLabel id="simple-select">I'm Interested In ...</InputLabel>
+              <Select
+                labelId="simple-select-label"
+                id="simple-select"
+                label="I'm Interested In ..."
+                value={formData.interest}
+                onChange={handleInputChange}
+                name="interest"
+              >
+                <MenuItem value={"rail"}>Rail</MenuItem>
+                <MenuItem value={"construction"}>Construction</MenuItem>
+                <MenuItem value={"optic-fibre"}>Optic Fibre</MenuItem>
+              </Select>
+            </FormControl>
+
+            <TextField
+              key="more-info-field"
+              label="More information"
+              name="moreInfo"
+              value={formData.moreInfo}
+              onChange={handleInputChange}
+              multiline
+              rows={4}
+              className={styles.textField}
+              classes={{ root: styles.textFieldRoot }}
+            />
+
+            <button
+              type="submit"
+              className={styles.button}
+              // onClick={handleSubmit}
             >
-              <MenuItem value={"rail"}>Rail</MenuItem>
-              <MenuItem value={"construction"}>Construction</MenuItem>
-              <MenuItem value={"optic-fibre"}>Optic Fibre</MenuItem>
-            </Select>
-          </FormControl>
-
-          <TextField
-            key="more-info-field"
-            label="More information"
-            name="moreInfo"
-            value={formData.moreInfo}
-            onChange={handleInputChange}
-            multiline
-            rows={4}
-            className={styles.textField}
-            classes={{ root: styles.textFieldRoot }}
-          />
-
-          <button
-            type="submit"
-            className={styles.button}
-            onClick={handleSubmit}
-          >
-            SEND
-          </button>
-        </div>
+              SEND
+            </button>
+          </div>
+        </form>
       </div>
       <LottieAnimation animation={team} width={500} height={500} margin="0" />
     </div>

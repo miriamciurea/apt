@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
     "module": "ESNext",
     "target": "ES6",
     "jsx": "react-jsx",
@@ -35,15 +36,7 @@
   },
   "include": [
     "src",
-    "types",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.css",
-    "src/**/*.json",
-    "src/**/*.module.css",
-    "src/*",
-    "src/types/global.d.ts",
-    "src/**/*"
+    "src/types",
   ],
-  "exclude": ["node_modules", "build"]
+  "exclude": ["node_modules", "build", "dist"]
 }

@@ -1,10 +1,11 @@
 import React, { useRef, useEffect } from 'react';
 import styles from './Hero.module.css';
-// import backround from '../../assets/backround-hero.webp';
 import videoBG from '../../assets/autumn.mp4';
 
 
 const Hero: React.FC = () => {
+
+  console.log('Styles object:', styles);
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
