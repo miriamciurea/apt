@@ -164,7 +164,7 @@ module.exports = {
     static: './dist',
     hot: true,
   },
-  devtool: 'false',
+  devtool: 'source-map',
   cache: {
     type: 'filesystem',
   }
