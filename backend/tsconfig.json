@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./dist", // Output directory for compiled JavaScript files
-    "rootDir": "./src", // Directory for your TypeScript files
+    "outDir": "./dist",
+    "rootDir": "./src",
     "module": "ESNext",
     "target": "ES6",
     "strict": true,
