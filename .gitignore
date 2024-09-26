@@ -24,7 +24,7 @@ npm-debug.log*
 # *.swp
 
 # Ignore compiled TypeScript files (if using TypeScript)
-dist/
+# dist/
 
 # Ignore package-lock.json if you're using yarn
 package-lock.json
