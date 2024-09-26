@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     outDir: 'dist', // Ensure the dist folder is used
     rollupOptions: {
-      input: './public/index.html', // Make sure the right entry point is used
+      input: './index.html', // Make sure the right entry point is used
     },
   },
 })

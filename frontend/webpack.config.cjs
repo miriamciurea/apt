@@ -155,8 +155,9 @@ module.exports = {
       filename: '[name].css', // This is correct for CSS extraction
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html', // Correct place for template
+      template: './index.html', // Correct place for template
       filename: 'index.html', // Generate index.html in dist
+      inject: 'body',
     }),
   ],
   devServer: {
