@@ -45,8 +45,6 @@ const Cta: React.FC = () => {
         </div>
 
         <div className={styles.subtitle}>WHAT ARE YOU WAITING FOR?</div>
-
-
         <div className={styles.cta_button}>
           <div className="cta">
             <a href="/getintouch" className="navLink learnMore">
