@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './EarlyDays.module.css';
+import * as styles from './EarlyDays.module.css';
 import h1 from '../../../public/images/h1.jpeg'; // Import local images
 import h2 from '../../../public/images/h2.jpeg';
 import h3 from '../../../public/images/h3.jpeg';
@@ -31,7 +31,7 @@ const EarlyDays: React.FC = () => {
                 />
               </div>
 
-              <div className={styles.photo}>
+              <div>
                 <img
                   src={h2} // Keeping h2 as it is
                   alt="Team Construction Site"

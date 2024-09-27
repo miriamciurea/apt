@@ -1,4 +1,4 @@
-import styles from "./Review.module.css";
+import * as styles from "./Review.module.css";
 
 interface ReviewProps {
   name: string;

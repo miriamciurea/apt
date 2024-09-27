@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import styles from './Hero.module.css';
+import * as styles from './Hero.module.css';
 import videoBG from '../../assets/autumn.mp4';
 
 

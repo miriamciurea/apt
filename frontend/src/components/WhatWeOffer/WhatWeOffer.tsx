@@ -1,4 +1,4 @@
-import styles from "./WhatWeOffer.module.css";
+import * as styles from "./WhatWeOffer.module.css";
 
 const domains = [
   {

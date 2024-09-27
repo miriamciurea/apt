@@ -1,4 +1,4 @@
-import styles from "./Icon.module.css";
+import * as styles from "./Icon.module.css";
 
 type IconProps = {
   Component: JSX.Element;

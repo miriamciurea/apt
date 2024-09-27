@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styles from './Cta.module.css';
+import * as styles from './Cta.module.css';
 // import newlogo from '../../assets/newlogo.png';
 
 const Cta: React.FC = () => {
@@ -43,7 +43,7 @@ const Cta: React.FC = () => {
           WHAT ARE YOU WAITING FOR?
         </div>
 
-        <div className={styles.cta_button}>
+        <div>
         <div className="cta">
           <a href="/cta" className="navLink learnMore">
             <span className="circle" aria-hidden="true">

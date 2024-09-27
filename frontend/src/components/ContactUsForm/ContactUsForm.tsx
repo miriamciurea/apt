@@ -1,8 +1,5 @@
-// <<<<<<< HEAD
-// import { useState } from "react";
-// import styles from "./ContactUsForm.module.css";
 import React, { useState } from "react";
-import styles from "./ContactUsForm.module.css";
+import * as styles from "./ContactUsForm.module.css";
 import { SelectChangeEvent } from '@mui/material/Select';
 
 import {
@@ -133,7 +130,7 @@ const ContactForm = () => {
               onChange={handleInputChange}
               error={Boolean(errors.email)}
               helperText={errors.email}
-              className={styles.textField}
+              // className={styles.textField}
               classes={{ root: styles.textFieldRoot }}
             />
 
@@ -145,7 +142,7 @@ const ContactForm = () => {
               onChange={handleInputChange}
               error={Boolean(errors.phone)}
               helperText={errors.phone}
-              className={styles.textField}
+              // className={styles.textField}
               classes={{ root: styles.textFieldRoot }}
             />
 
@@ -173,7 +170,7 @@ const ContactForm = () => {
               onChange={handleInputChange}
               multiline
               rows={4}
-              className={styles.textField}
+              // className={styles.textField}
               classes={{ root: styles.textFieldRoot }}
             />
 

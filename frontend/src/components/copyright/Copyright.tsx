@@ -1,10 +1,10 @@
 import React from 'react';
-import './Copyright.module.css'; // Import the CSS file
+import * as styles from './Copyright.module.css';
 
 
 const Copyright: React.FC = () => {
   return (
-    <div className="terms-and-conditions">
+    <div className={styles.termsAndConditions}>
       <h1>Terms and Conditions</h1>
       <p>Last updated: September 18, 2024</p>
       <p>Please read these terms and conditions carefully before using Our Service.</p>

@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist', // Ensure the dist folder is used
+    sourcemap: false,
     rollupOptions: {
       input: './index.html', // Make sure the right entry point is used
     },

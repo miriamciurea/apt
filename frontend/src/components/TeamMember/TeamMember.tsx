@@ -1,4 +1,4 @@
-import styles from "./TeamMember.module.css";
+import * as styles from "./TeamMember.module.css";
 
 type TeamMemberProps = {
   imageSource: string;

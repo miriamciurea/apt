@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
 import UploadFileIcon from "@mui/icons-material/UploadFile";
-import styles from "./SendCVForm.module.css";
+import * as styles from "./SendCVForm.module.css";
 import { Player } from '@lottiefiles/react-lottie-player';
 // import { Player } from '@lottie-react';
 import animation from './Animation - 1727174952021.json'; // Adjust the path
@@ -104,7 +104,7 @@ const SendCVForm = () => {
         </label>
 
 
-        <div className={styles.formGroup} style={{ width: '100%', maxWidth: '400px' }}>
+        <div style={{ width: '100%', maxWidth: '400px' }}>
           <button type="submit" className={styles.button} onClick={handleSubmit} style={{ width: '100%' }}>
             SEND
           </button>

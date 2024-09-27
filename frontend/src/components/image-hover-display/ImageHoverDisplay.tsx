@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ImageHoverDisplay.module.css';
+import * as styles from './ImageHoverDisplay.module.css';
 
 const ImageHoverDisplay: React.FC = () => {
   return (
