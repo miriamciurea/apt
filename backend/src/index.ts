@@ -35,10 +35,18 @@ app.options('*', cors(corsOptions));
 app.use(express.json());
 
 // Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, '../../frontend/dist')));
+// app.use(express.static(path.join(__dirname, '../../frontend/dist')));
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../../frontend/dist', 'index.html'));
+// });
+
+app.use(express.static(path.join(__dirname, '../../../frontend/dist')));
+// dist/backend/src/index.js
+// '/Users/miriamciurea/code/miriamciurea/apt/dist/frontend/index.html'
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/dist', 'index.html'));
+  res.sendFile(path.join(__dirname, '../../../frontend/dist/index.html'));
 });
 
 // Use the contact form routes
