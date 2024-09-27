@@ -42,6 +42,6 @@ dist/
 .vscode/
 *.log
 
-/dist
+# /dist
 
 quiet-badlands-33835/
