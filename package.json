@@ -181,8 +181,8 @@
     "start": "node dist/index.js",
     "dev": "nodemon backend/src/index.ts",
     "build": "tsc",
-    "build-all": "npm --prefix frontend install babel-loader npm --prefix frontend run build && npm --prefix backend run build",
-    "start-all": "npm --prefix backend run start && npm --prefix frontend run dev"
+    "heroku-postbuild": "cd frontend && npm install vite && npm run build && cd .. && cd backend && npm run build",
+    "start-all": "node backend/dist/index.js"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.3"
