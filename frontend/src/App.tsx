@@ -1,4 +1,3 @@
-import React from "react";
 import {Route, Routes} from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -11,7 +10,8 @@ import ProjectShow from "./pages/projects/ProjectShow";
 import Copyright from "./components/copyright/Copyright";
 import ContactUs from "./pages/ContactUs/ContactUs";
 
-const App: React.FC = () => {
+const App = function() {
+
     return (
         <>
             <Navbar/>
