@@ -181,8 +181,7 @@
     "start": "node dist/index.js",
     "dev": "nodemon backend/src/index.ts",
     "build": "tsc",
-    "heroku-postbuild": "npm --prefix frontend run build && npm --prefix backend run build",
-    "build-all": "npm --prefix frontend install vite",
+    "heroku-postbuild": "npm --prefix frontend install vite npm --prefix frontend run build && npm --prefix backend run build",
     "start-all": "node dist/backend/src/index.js"
   },
   "optionalDependencies": {
