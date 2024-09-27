@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as styles from "./ContactUsForm.module.css";
+import styles from "./ContactUsForm.module.css";
 import { SelectChangeEvent } from '@mui/material/Select';
 
 import {

@@ -1,5 +1,5 @@
 // import { useEffect, useRef, useState } from "react";
-import * as styles from "./ScrollingText.module.css";
+import styles from "./ScrollingText.module.css";
 
 const ScrollingText = () => {
   // const [scrollPosition, setScrollPosition] = useState(0);

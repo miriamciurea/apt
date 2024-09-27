@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import * as styles from './HomeProjects.module.css'; // Adjust path as necessary
+import styles from './HomeProjects.module.css'; // Adjust path as necessary
 
 const HomeProjects: React.FC = () => {
   // New projects from JSON data (first 5)

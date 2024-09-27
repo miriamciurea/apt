@@ -1,5 +1,5 @@
 import TeamMember from "../TeamMember/TeamMember";
-import * as styles from "./Team.module.css";
+import styles from "./Team.module.css";
 const teamMembers = [
   {
     name: "Jane Doe",

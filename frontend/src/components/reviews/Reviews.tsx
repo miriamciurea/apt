@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./Reviews.module.css";
+import styles from "./Reviews.module.css";
 import siemens from "../../assets/siemens.png";
 import ScrollingText from "./ScrollingText/ScrollingText";
 import Review from "./Review/Review";

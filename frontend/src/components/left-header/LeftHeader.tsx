@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./LeftHeader.module.css";
+import styles from "./LeftHeader.module.css";
 
 const LeftHeader: React.FC = () => {
   return (

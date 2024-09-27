@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import * as styles from './ProjectShow.module.css';
+import styles from './ProjectShow.module.css';
 
 interface Project {
   id: number;

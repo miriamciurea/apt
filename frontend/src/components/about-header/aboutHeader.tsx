@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./aboutHeader.module.css";
+import styles from "./aboutHeader.module.css";
 
 const AboutHeader: React.FC = () => {
   return (

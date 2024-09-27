@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import * as styles from './Slider.module.css';
+import styles from './Slider.module.css';
 
 const Slider: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string>('');

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import * as styles from './Navbar.module.css';
+import styles from './Navbar.module.css';
 import newlogo from '../../assets/newlogo.png';
 
 const Navbar: React.FC = () => {

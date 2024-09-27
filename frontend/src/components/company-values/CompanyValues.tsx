@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as styles from './CompanyValues.module.css';
+import styles from './CompanyValues.module.css';
 
 interface Values {
   title: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Loop.module.css';
+import styles from './Loop.module.css';
 
 const Loop: React.FC = () => {
   return (

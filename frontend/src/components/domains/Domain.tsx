@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./Domain.module.css";
+import styles from "./Domain.module.css";
 import electric from "../../lotties/electric.json";
 import train from "../../lotties/train.json";
 import construction from "../../lotties/construction.json";

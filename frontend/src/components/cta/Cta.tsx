@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import * as styles from './Cta.module.css';
+import styles from './Cta.module.css';
 // import newlogo from '../../assets/newlogo.png';
 
 const Cta: React.FC = () => {

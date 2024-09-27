@@ -1,5 +1,5 @@
 import React from "react";
-import * as styles from "./CareersFirstSection.module.css";
+import styles from "./CareersFirstSection.module.css";
 
 const items = [
   { name: "INNOVATIVE AND IMPACTFUL WORK" },

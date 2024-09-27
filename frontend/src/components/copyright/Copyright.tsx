@@ -1,5 +1,5 @@
 import React from 'react';
-import * as styles from './Copyright.module.css';
+import styles from './Copyright.module.css';
 
 
 const Copyright: React.FC = () => {
