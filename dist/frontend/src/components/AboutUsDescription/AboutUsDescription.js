@@ -15,15 +15,15 @@ const icons = [
     { iconComponent: (0, jsx_runtime_1.jsx)(fa_1.FaLightbulb, {}), text: "Innovation" },
     { iconComponent: (0, jsx_runtime_1.jsx)(fa_3.FaLeaf, {}), text: "Sustainabillity" },
     {
-        iconComponent: (0, jsx_runtime_1.jsx)(fi_1.FiCheckCircle, { className: AboutUsDescription_module_css_1.default.icon }),
+        iconComponent: (0, jsx_runtime_1.jsx)(fi_1.FiCheckCircle, {}),
         text: "Certified",
     },
     {
-        iconComponent: (0, jsx_runtime_1.jsx)(md_1.MdDiversity3, { className: AboutUsDescription_module_css_1.default.icon }),
+        iconComponent: (0, jsx_runtime_1.jsx)(md_1.MdDiversity3, {}),
         text: "Inclusive",
     },
     {
-        iconComponent: (0, jsx_runtime_1.jsx)(fa_2.FaHardHat, { className: AboutUsDescription_module_css_1.default.icon }),
+        iconComponent: (0, jsx_runtime_1.jsx)(fa_2.FaHardHat, {}),
         text: "Safety",
     },
 ];
