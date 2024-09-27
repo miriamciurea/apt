@@ -182,7 +182,7 @@
     "dev": "nodemon backend/src/index.ts",
     "build": "tsc",
     "heroku-postbuild": "npm --prefix frontend install vite npm --prefix frontend run build && npm --prefix backend run build",
-    "start-all": "node dist/backend/src/index.js"
+    "start-all": "node backend/dist/index.js"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.3"

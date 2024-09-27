@@ -3,7 +3,7 @@ import cors, { CorsOptions } from 'cors';
 import dotenv from 'dotenv';
 import contactRoutes from './routes/contact';  // Use import instead of require
 import helmet from 'helmet';
-import compression from 'compression';
+// import compression from 'compression';
 import path from 'path';
 
 dotenv.config();
@@ -23,7 +23,7 @@ const corsOptions: CorsOptions = {
 app.use(helmet());
 
 // Enable response compression using Compression middleware
-app.use(compression());
+// app.use(compression());
 
 // Use CORS with the options
 app.use(cors(corsOptions));
@@ -41,12 +41,15 @@ app.use(express.json());
 //   res.sendFile(path.join(__dirname, '../../frontend/dist', 'index.html'));
 // });
 
-app.use(express.static(path.join(__dirname, '../../../frontend/dist')));
+app.use(express.static(path.join(__dirname, '../../frontend/dist')));
 // dist/backend/src/index.js
 // '/Users/miriamciurea/code/miriamciurea/apt/dist/frontend/index.html'
 
+
+// node backend/dist/index.js"
+
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../../frontend/dist/index.html'));
+  res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
 });
 
 // Use the contact form routes
