@@ -26,5 +26,10 @@ npm-debug.log*
 # Ignore compiled TypeScript files (if using TypeScript)
 dist/
 
+frontend/dist/
+
+# Ignore dist in the backend directory (if applicable)
+backend/dist/
+
 # Ignore package-lock.json if you're using yarn
 package-lock.json

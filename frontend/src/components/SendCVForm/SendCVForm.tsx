@@ -104,7 +104,7 @@ const SendCVForm = () => {
         </label>
 
 
-        <div className={styles.formGroup} style={{ width: '100%', maxWidth: '400px' }}>
+        <div style={{ width: '100%', maxWidth: '400px' }}>
           <button type="submit" className={styles.button} onClick={handleSubmit} style={{ width: '100%' }}>
             SEND
           </button>

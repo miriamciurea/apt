@@ -16,7 +16,7 @@ const CareersFirstSection: React.FC = () => {
       <div className={styles.container}>
         <h1 className={styles.title}>
           THRILLED TO WELCOME <span className={styles.highlight}>YOU</span> TO{" "}
-          <span className={styles.underlined}>OUR TEAM</span>
+          <span>OUR TEAM</span>
         </h1>
         <h2 className={styles.subTitle}>WHY JOIN US?</h2>
         <div className={styles.reasonsContainer}>

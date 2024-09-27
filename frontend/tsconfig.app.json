@@ -1,24 +1,42 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
+    "sourceMap": true,
+    "module": "CommonJS",
+    "target": "ES6",
     "jsx": "react-jsx",
-
+    //  "strict": true,
+     "esModuleInterop": true,
+     "skipLibCheck": true,
+     "forceConsistentCasingInFileNames": true,
+     "moduleResolution": "node",
+    "resolveJsonModule": true,
+     "baseUrl": "./src",
+     "paths": {
+       "@components/*": ["./src/components/*"],
+       "@pages/*": ["./src/pages/*"],
+       "*": ["./src/types/*"]
+     },
+     "types": [
+       "node",
+       "react",
+       "react-dom",
+       "@types/node",
+       "@types/react",
+       "@types/react-dom",
+       "multer",
+       "cors",
+       "mime"
+     ],
     /* Linting */
-    "strict": false,
+    // "strict": false,
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "src/types",
+  ],
+  "exclude": ["node_modules", "build", "dist"]
 }

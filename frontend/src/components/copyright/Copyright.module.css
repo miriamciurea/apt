@@ -1,5 +1,5 @@
 
-.terms-and-conditions {
+.termsAndConditions {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -9,13 +9,13 @@
   padding: 50px;
 }
 
-.terms-and-conditions h1 {
+.termsAndConditions h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.terms-and-conditions h2 {
+.termsAndConditions h2 {
   font-size: 2rem;
   margin-top: 30px;
   margin-bottom: 15px;
@@ -24,40 +24,40 @@
   padding-bottom: 5px;
 }
 
-.terms-and-conditions h3 {
+.termsAndConditions h3 {
   font-size: 1.5rem;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-.terms-and-conditions p {
+.termsAndConditions p {
   font-size: 1rem;
   margin-bottom: 15px;
 }
 
-.terms-and-conditions ul {
+.termsAndConditions ul {
   padding-left: 20px;
   list-style-type: disc;
 }
 
-.terms-and-conditions ul li {
+.termsAndConditions ul li {
   margin-bottom: 10px;
 }
 
-.terms-and-conditions a {
+.termsAndConditions a {
   color: #007BFF;
   text-decoration: none;
 }
 
-.terms-and-conditions a:hover {
+.termsAndConditions a:hover {
   text-decoration: underline;
 }
 
-.terms-and-conditions strong {
+.termsAndConditions strong {
   font-weight: bold;
 }
 
-.terms-and-conditions {
+.termsAndConditions {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -65,24 +65,24 @@
 
 /* Media Query for mobile devices */
 @media (max-width: 600px) {
-  .terms-and-conditions {
+  .termsAndConditions {
     padding: 10px;
   }
 
-  .terms-and-conditions h1 {
+  .termsAndConditions h1 {
     font-size: 2rem;
   }
 
-  .terms-and-conditions h2 {
+  .termsAndConditions h2 {
     font-size: 1.75rem;
   }
 
-  .terms-and-conditions h3 {
+  .termsAndConditions h3 {
     font-size: 1.25rem;
   }
 
-  .terms-and-conditions p,
-  .terms-and-conditions ul li {
+  .termsAndConditions p,
+  .termsAndConditions ul li {
     font-size: 0.9rem;
   }
 }

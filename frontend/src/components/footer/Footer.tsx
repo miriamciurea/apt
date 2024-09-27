@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
 
         <div className={styles.about}>
           <div className={styles.title}>Who We Are</div>
-          <div className={styles.about_text}>
+          <div>
             APT is a construction agency that specializes in rail, civil and
             optic fibre, located in Midlands, United Kingdom.
           </div>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 <span className="material-symbols-outlined">location_on</span>
               </div>
 
-              <div className={styles.git_text}>
+              <div>
                 582 Honeypot Lane, HA7 1JS
               </div>
             </div>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
                 <span className="material-symbols-outlined">mail</span>
               </div>
 
-              <div className={styles.git_text}>info@apt.com</div>
+              <div>info@apt.com</div>
             </div>
 
             <div className={styles.git_component}>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                 <span className="material-symbols-outlined">call</span>
               </div>
 
-              <div className={styles.git_text}>+447977763028</div>
+              <div>+447977763028</div>
             </div>
           </div>
         </div>

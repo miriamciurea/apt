@@ -31,7 +31,7 @@ const EarlyDays: React.FC = () => {
                 />
               </div>
 
-              <div className={styles.photo}>
+              <div>
                 <img
                   src={h2} // Keeping h2 as it is
                   alt="Team Construction Site"
