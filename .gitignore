@@ -33,3 +33,15 @@ backend/dist/
 
 # Ignore package-lock.json if you're using yarn
 package-lock.json
+
+.cache/
+*.log
+
+dist/
+.cache/
+.vscode/
+*.log
+
+/dist
+
+quiet-badlands-33835/
