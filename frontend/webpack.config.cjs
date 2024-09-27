@@ -164,7 +164,7 @@ module.exports = {
     static: './dist',
     hot: true,
   },
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'production' ? false : 'source-map',
   cache: {
     type: 'filesystem',
   }
