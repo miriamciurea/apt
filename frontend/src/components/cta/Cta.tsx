@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styles from './Cta.module.css';
+import React, { useEffect, useRef, useState } from "react";
+import styles from "./Cta.module.css";
 // import newlogo from '../../assets/newlogo.png';
 
 const Cta: React.FC = () => {
-
   const ctaRef = useRef(null); // Reference to the div
   const [isInView, setIsInView] = useState(false); // State to track if the section is in view
 
@@ -23,7 +22,6 @@ const Cta: React.FC = () => {
       observer.observe(ctaRef.current); // Start observing the ref
     }
 
-
     return () => {
       if (ctaRef.current) {
         observer.unobserve(ctaRef.current); // Clean up the observer on component unmount
@@ -31,32 +29,44 @@ const Cta: React.FC = () => {
     };
   }, []);
 
-
   return (
     <>
-    <div className={isInView ? `${styles.cta} ${styles.zoom} ${styles['tracking-in-expand']}` : `${styles.cta} ${styles.zoom}`} ref={ctaRef}>
+      <div
+        className={
+          isInView
+            ? `${styles.cta} ${styles.zoom} ${styles["tracking-in-expand"]}`
+            : `${styles.cta} ${styles.zoom}`
+        }
+        ref={ctaRef}
+      >
         <div className={styles.title}>
-          GET <span className={styles.blue}>CLOSER</span> TO YOUR <span className={styles.blue}>DREAMS</span>
+          GET <span className={styles.blue}>CLOSER</span> TO YOUR{" "}
+          <span className={styles.blue}>DREAMS</span>
         </div>
 
-        <div className={styles.subtitle}>
-          WHAT ARE YOU WAITING FOR?
-        </div>
+        <div className={styles.subtitle}>WHAT ARE YOU WAITING FOR?</div>
 
-        <div>
+<!--         <div>
         <div className="cta">
           <a href="/cta" className="navLink learnMore">
             <span className="circle" aria-hidden="true">
               <span className="icon arrow"></span>
             </span>
             <span className="buttonText">GET IN TOUCH</span>
-          </a>
+          </a> -->
+        <div className={styles.cta_button}>
+          <div className="cta">
+            <a href="/getintouch" className="navLink learnMore">
+              <span className="circle" aria-hidden="true">
+                <span className="icon arrow"></span>
+              </span>
+              <span className="buttonText">GET IN TOUCH</span>
+            </a>
           </div>
-
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Cta
+export default Cta;

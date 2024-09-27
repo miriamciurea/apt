@@ -172,7 +172,6 @@
 
   }
 }
-
 @media (max-width: 690px) {
   .containerProjects {
     .projectDisplay {
@@ -180,6 +179,11 @@
       grid-template-columns: 1fr;
       height: 80vh;
       margin: 0px 30px;
+    }
+
+    .projectImage {
+        width: 80%;
+      justify-self: center;
     }
 
     h2 {
@@ -192,13 +196,25 @@
       gap: 10px;
     }
 
-    a, button, .projectCounter {
+    a,
+    button,
+    .projectCounter {
       font-size: 0.8rem;
     }
 
     .navigation {
       flex-direction: row;
     }
-  }
 
+    .projectImage {
+      margin: 20px 0;
+      padding: 0 20px;
+      /* Add padding to the left and right of the image */
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto;
+      /* Adjust the height to fit the content */
+    }
+  }
 }
