@@ -11,7 +11,7 @@ const reviews = [
     name: "Steve J.",
     companyName: "Siemens mobility",
     reviewText:
-      "This is the review text from client 1. They had a great experience with our service.",
+      "Great Experience working with this company. They were very professional and delivered the project on time.",
   },
   {
     src: siemens,
@@ -19,7 +19,7 @@ const reviews = [
     name: "Andrew W.",
     companyName: "Lumen",
     reviewText:
-      "This is the review text from client 2. They were very satisfied with the results.",
+      "Works delivered on time and within budget. They were very professional and easy to work with.",
   },
   {
     src: siemens,
@@ -27,7 +27,7 @@ const reviews = [
     name: "Josh S.",
     companyName: "Siemens mobility",
     reviewText:
-      "This is the review text from client 3. They highly recommend our services.",
+      "Easy to work with and very professional. They delivered the project on time and within budget.",
   },
 ];
 
