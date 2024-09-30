@@ -49,7 +49,7 @@ const Slider: React.FC = () => {
             </p>
           </div>
           <div className={styles.link}>
-            <a href="your-link-url" className={styles.homeLink}>
+            <a href="/careers" className={styles.homeLink}>
               Our Career Opportunities &gt;&gt;
             </a>
           </div>

@@ -61,21 +61,24 @@
 }
 
 .innovative {
-  color: #000;
+  color: #fff;
   /* Black color */
-  font-size: 4rem;
+  font-size: 3rem;
   /* Adjust size as needed */
-}
+opacity: 0.5;}
 
 .railway {
-  color: #fff;
-  font-size: 4rem;
+  color: #007AFF;
+  font-size: 3rem;
   font-weight: bold;
+  opacity: 0.7;
+
 }
 
 .fibre {
-  color: #000;
-  font-size: 4rem;
+  color: #fff;
+  font-size: 3rem;
+  opacity: 0.5;
 }
 
 .cta {
