@@ -3,7 +3,7 @@ import styles from './Slider.module.css';
 
 const Slider: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string>('');
-  const fallbackImageUrl = 'https://images.unsplash.com/photo-1630683924997-fe27050a0416?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+  const fallbackImageUrl = '/public/images/join.jpg';
 
   useEffect(() => {
     const fetchImage = async () => {
