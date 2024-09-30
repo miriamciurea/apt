@@ -31,32 +31,7 @@ const HomeProjects: React.FC = () => {
     }
   ];
 
-  // Existing hardcoded projects (remaining ones)
-  const oldProjects = [
-    {
-      src: "https://images.unsplash.com/photo-1593630265256-d2cc162ab58f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3R1Y3Rpb24lMjBzaXRlfGVufDB8fDB8fHwy",
-      alt: "Construction Site",
-      info: "Build Works | US"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1680879221403-f19bb46fe527?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHJhaWx3YXklMjB3b3JrZXJzfGVufDB8fDB8fHwy",
-      alt: "Railway Workers",
-      info: "Railway Project | Germany"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1712233462849-7db3060ba1f3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmFpbHdheSUyMHdvcmtlcnN8ZW58MHwxfDB8fHwy",
-      alt: "Railway Construction",
-      info: "Railway Works | Japan"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1593630987785-98139c5f3cc6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y29uc3R1Y3Rpb24lMjBzaXRlfGVufDB8fDB8fHwy",
-      alt: "Construction",
-      info: "Skyline Projects | UAE"
-    }
-  ];
-
-  // Merge the new projects with the remaining old projects
-  const projects = [...newProjects, ...oldProjects];
+  const projects = [...newProjects];
 
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(0);
