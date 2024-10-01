@@ -56,6 +56,7 @@ const Slider: React.FC = () => {
               Our Career Opportunities &gt;&gt;
             </button>
           </div>
+
         </div>
       </div>
     </div>

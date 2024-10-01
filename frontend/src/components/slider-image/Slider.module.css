@@ -38,6 +38,7 @@
   /* Pointer cursor */
   text-decoration: none;
   /* No underline */
+
   padding: 0;
   /* Remove padding */
   transition: color 0.3s;
@@ -49,7 +50,10 @@
   /* Change color on hover (customize as needed) */
   text-decoration: underline;
   /* Optional: Add underline on hover */
+  font-size: 1rem;
 }
+
+
 
 .overlay {
   position: absolute;
