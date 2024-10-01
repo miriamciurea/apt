@@ -3,6 +3,7 @@ import styles from "./Reviews.module.css";
 import siemens from "../../assets/siemens.png";
 import ScrollingText from "./ScrollingText/ScrollingText";
 import Review from "./Review/Review";
+import lumen from "../../assets/lumen.png";
 
 const reviews = [
   {
@@ -14,7 +15,7 @@ const reviews = [
       "Great Experience working with this company. They were very professional and delivered the project on time.",
   },
   {
-    src: siemens,
+    src: lumen,
     alt: "Lumen logo",
     name: "Andrew W.",
     companyName: "Lumen",

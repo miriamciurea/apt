@@ -15,7 +15,8 @@ const Hero: React.FC = () => {
     <section className={styles.hero}>
       {/* Use the Dropbox video link directly in the video element */}
       <video
-        src="https://ucb563f805aa9c794a9a50b56f51.dl.dropboxusercontent.com/cd/0/inline/CbmSMyHIzv-XwRoVo-TVcOtNO3xYUNvFgD61RdlWPBvnpHQ1AXsufotzKfPMn_ZZIUXblihKA_A7fWm9b046-VfVeUiFhZlbtSasTYd1ROo7-ZGn7UmYoBC47Wu_pKKaOloIODp80PJEycbFmST5AF6G/file#"
+        src="https://ucabe4b46852eb75a248a4b842cb.dl.dropboxusercontent.com/cd/0/inline/Cbl-s64FoyBFAEDAjzBWuEQqKQ6q1Yxer0NBXacnZvvc2QmPdQE5IC0gEY4B6YgVSfmOdylvdWbBoJI4A0NrOmTjWLzMwVfcThJvo9Cm2MPYre22fMnwbtjI7wlAWJYl99UrMhuAyLZFJ-yW9H5u3YZN/file#"
+
         autoPlay
         loop
         muted
