@@ -1,4 +1,3 @@
-/* Slider.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&family=Space+Grotesk:wght@400&display=swap');
 /* Import fonts */
 
@@ -24,7 +23,32 @@
   background-position: var(--background-position, center center);
   /* Default position */
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 0;
+  /* Adjusted to 0 */
+}
+
+.homeButton {
+  background: none;
+  /* No background */
+  border: none;
+  /* No border */
+  color: inherit;
+  /* Use the same color as surrounding text */
+  cursor: pointer;
+  /* Pointer cursor */
+  text-decoration: none;
+  /* No underline */
+  padding: 0;
+  /* Remove padding */
+  transition: color 0.3s;
+  /* Smooth transition */
+}
+
+.homeButton:hover {
+  color: #007bff;
+  /* Change color on hover (customize as needed) */
+  text-decoration: underline;
+  /* Optional: Add underline on hover */
 }
 
 .overlay {
@@ -43,6 +67,8 @@
   padding: 20px;
   box-sizing: border-box;
   /* Ensure padding doesn't affect size */
+  z-index: 1;
+  /* Ensure overlay is above background */
 }
 
 .title {
@@ -71,22 +97,6 @@
   margin-top: 20px;
 }
 
-.homeLink {
-  /* font-family: 'Orbitron', sans-serif; */
-  font-family: var(--sec);
-  font-size: 20px;
-  color: #ffffff;
-  background: transparent;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.homeLink:hover {
-  background: black;
-}
-
 /* Mobile Devices */
 @media (max-width: 768px) {
   .home {
@@ -104,11 +114,9 @@
     /* Smaller font size for smaller screens */
   }
 
-  .homeLink {
+  .homeButton {
     font-size: 18px;
     /* Smaller font size for smaller screens */
-    padding: 8px 16px;
-    /* Adjust padding */
   }
 }
 
@@ -129,10 +137,8 @@
     /* Even smaller font size */
   }
 
-  .homeLink {
+  .homeButton {
     font-size: 16px;
     /* Even smaller font size */
-    padding: 6px 12px;
-    /* Adjust padding */
   }
 }
