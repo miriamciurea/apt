@@ -49,10 +49,14 @@ const Slider: React.FC = () => {
             </p>
           </div>
           <div className={styles.link}>
-            <a href="/careers" className={styles.homeLink}>
+            <button
+              onClick={() => window.location.href = '/careers'}
+              className={styles.homeButton}
+            >
               Our Career Opportunities &gt;&gt;
-            </a>
+            </button>
           </div>
+
         </div>
       </div>
     </div>
