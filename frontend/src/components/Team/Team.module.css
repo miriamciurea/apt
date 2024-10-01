@@ -1,13 +1,12 @@
 .teamSection {
     padding: 40px 20px;
     text-align: center;
-    background-color: #fff;
 }
 
 .teamTitle {
     margin-bottom: 30px;
     font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;   
+    font-size: 2rem;
     font-weight: unset;
 }
 
@@ -28,7 +27,7 @@
         align-items: center;
     }
 
-    
+
 }
 
 @media (max-width: 480px) {
