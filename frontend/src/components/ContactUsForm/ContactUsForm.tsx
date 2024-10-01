@@ -379,7 +379,7 @@ const ContactForm = () => {
           </div>
         </form>
       </div>
-      <LottieAnimation animation={team} width={500} height={500} margin="0" />
+      <LottieAnimation animation={team} width={500} height={undefined} margin="0" />
 
       {/* Notification Snackbar */}
       <Snackbar

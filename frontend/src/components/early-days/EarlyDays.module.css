@@ -51,12 +51,6 @@
   font-size: 2rem;
 }
 
-@media (max-width: 740px) {
-  .content {
-    gap: 10px
-  }
-}
-
 @media (max-width: 560px) {
   .content {
     grid-template-columns: none;

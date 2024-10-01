@@ -4,7 +4,6 @@
   flex-direction: column;
   align-items: center;
   padding: 50px 0px;
-  background-color: #fff;
 }
 
 .title {
@@ -38,7 +37,7 @@
 .introContainer {
     display: flex;
     align-items: center;
-    max-width: 80%;
+    max-width: 100%;
     margin-bottom: 30px;
 }
 
@@ -126,7 +125,13 @@
 
     .iconsContainer {
       width: 100%;
-      flex-direction: column;
       align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0px;
+
+      svg {
+        font-size: 3rem;
+      }
     }
   }

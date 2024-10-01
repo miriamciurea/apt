@@ -36,27 +36,27 @@
     box-sizing: border-box;
     overflow: hidden;
   }
-  
+
   .title {
     font-family: 'Orbitron', sans-serif;
     font-size: 24px;
   }
-  
+
   .formGroup {
     margin-bottom: 20px;
   }
-  
+
   .label {
     display: block;
     font-family: 'Space Grotesk', sans-serif;
     font-size: 14px;
     margin-bottom: 5px;
   }
-  
+
   .label span {
     color: red;
   }
-  
+
   .input,
   .textarea {
     width: 100%;
@@ -66,27 +66,27 @@
     border-radius: 5px;
     font-family: 'Space Grotesk', sans-serif;
   }
-  
+
   .textarea {
     height: 100px;
   }
-  
+
   .input:focus,
   .textarea:focus {
     outline: none;
     border-color: #007bff;
   }
-  
+
   .inputError {
     border-color: red;
   }
-  
+
   .errorMessage {
     color: red;
     font-size: 12px;
     margin-top: 5px;
   }
-  
+
   .button {
     padding: 10px 20px;
     background-color: transparent;
@@ -100,12 +100,12 @@
     width: 100%;
     margin-bottom: 30px;
   }
-  
+
   .button:hover {
     background-color: #000;
     color: #fff;
   }
-  
+
   /* Media queries for responsiveness */
 @media (max-width: 1024px) {
   .container {
@@ -147,5 +147,9 @@
   .container {
     justify-content: space-around;
     gap: 10px;
+  }
+
+  LottieAnimation {
+    height: auto;
   }
 }
