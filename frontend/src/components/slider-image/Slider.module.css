@@ -1,4 +1,3 @@
-/* Slider.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&family=Space+Grotesk:wght@400&display=swap');
 /* Import fonts */
 
@@ -24,7 +23,29 @@
   background-position: var(--background-position, center center);
   /* Default position */
   background-repeat: no-repeat;
-  z-index: -1;
+  z-index: 0;
+  /* Adjusted to 0 */
+}
+
+.homeButton {
+  background: none;
+  /* No background */
+  border: none;
+  /* No border */
+  color: inherit;
+  /* Use the same color as surrounding text */
+  cursor: pointer;
+  /* Pointer cursor */
+  padding: 0;
+  /* Remove padding */
+  transition: color 0.3s;
+  /* Smooth transition */
+  font-size: 1rem;
+}
+
+.homeButton:hover {
+  color: #007AFF;
+
 }
 
 .overlay {
@@ -43,6 +64,8 @@
   padding: 20px;
   box-sizing: border-box;
   /* Ensure padding doesn't affect size */
+  z-index: 1;
+  /* Ensure overlay is above background */
 }
 
 .title {
