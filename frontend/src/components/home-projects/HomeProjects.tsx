@@ -12,7 +12,7 @@ const HomeProjects: React.FC = () => {
     {
       src: "/images/n2.jpeg",
       alt: "NWEP Phase 3 Cable Containment",
-      info: "NWEP Cable Containment | Manchester – Euxton Jcn"
+      info: "NWEP Cable Containment | Euxton Jcn"
     },
     {
       src: "/images/f2.jpeg",
@@ -22,7 +22,7 @@ const HomeProjects: React.FC = () => {
     {
       src: "/images/sw1.jpeg",
       alt: "Switching Access and Stairways",
-      info: "Switching Access and Stairways | Blackpool, UK"
+      info: "Access and Stairways | Blackpool, UK"
     },
     {
       src: "/images/b1.jpeg",
