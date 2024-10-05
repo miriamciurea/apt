@@ -103,6 +103,13 @@
   }
 
   .navItem {
-    margin: 15px 30px;
+    margin: 15px 0px;
+    width: 100%;
   }
+
+    .navLink {
+      width: 90%;
+      padding: 15px;
+      text-align: center;
+    }
 }

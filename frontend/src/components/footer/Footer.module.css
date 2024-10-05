@@ -5,6 +5,8 @@ footer {
   margin: 50px 20px;
 }
 
+
+
 .about, .git, .pages {
   display: flex;
   flex-direction: column;
