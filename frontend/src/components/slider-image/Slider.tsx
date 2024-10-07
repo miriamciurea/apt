@@ -1,26 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Slider.module.css';
 
 const Slider: React.FC = () => {
-  const [imageUrl, setImageUrl] = useState<string>('');
-  const fallbackImageUrl = '/public/images/join.jpg';
 
   useEffect(() => {
-    const fetchImage = async () => {
-      try {
-        const response = await fetch(
-          `https://api.unsplash.com/photos/random?client_id=YOUR_UNSPLASH_ACCESS_KEY`
-        );
-        const data = await response.json();
-        setImageUrl(data.urls.regular || fallbackImageUrl);
-      } catch (error) {
-        console.error('Error fetching the image from Unsplash', error);
-        setImageUrl(fallbackImageUrl); // Use fallback image if fetch fails
-      }
-    };
-
-    fetchImage();
-
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const scrollPercent = scrollTop / (document.documentElement.scrollHeight - window.innerHeight);
@@ -37,7 +20,7 @@ const Slider: React.FC = () => {
   return (
     <div className={styles.home}>
       <div className={styles.background}
-        style={{ backgroundImage: `url(${imageUrl})`, backgroundPosition: 'var(--background-position)' }}
+        style={{ backgroundImage: 'url(/public/images/join.jpg)', backgroundPosition: 'var(--background-position)' }}
       >
         <div className={styles.overlay}>
           <div className={styles.title}>
