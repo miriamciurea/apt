@@ -13,14 +13,30 @@ const app = express();
 
 // Define the CORS options
 const corsOptions: CorsOptions = {
-  origin: 'http://localhost:5173',
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type'],
   credentials: true,
 };
 
 // Add security headers to requests using Helmet
-app.use(helmet());
+// app.use(helmet());
+
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        mediaSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow your S3 bucket
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", 'data:', 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow images from S3
+        connectSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow connections to S3
+        fontSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
+      },
+    },
+  })
+);
 
 // Enable response compression using Compression middleware
 // app.use(compression());
