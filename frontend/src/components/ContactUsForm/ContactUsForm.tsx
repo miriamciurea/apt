@@ -271,7 +271,7 @@ const ContactForm = () => {
 
     if (!formErrors.name && !formErrors.email && !formErrors.phone) {
       try {
-        const response = await fetch("http://localhost:5001/api/getintouch", {
+        const response = await fetch(`${process.env.FRONTEND_URL}/api/getintouch`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

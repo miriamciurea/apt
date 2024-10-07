@@ -20,24 +20,6 @@ const corsOptions: CorsOptions = {
 };
 
 // Add security headers to requests using Helmet
-// app.use(helmet());
-
-// app.use(
-//   helmet({
-//     contentSecurityPolicy: {
-//       directives: {
-//         defaultSrc: ["'self'"],
-//         mediaSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow your S3 bucket
-//         scriptSrc: ["'self'", "'unsafe-inline'"],
-//         styleSrc: ["'self'", "'unsafe-inline'"],
-//         imgSrc: ["'self'", 'data:', 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow images from S3
-//         connectSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow connections to S3
-//         fontSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
-//       },
-//     },
-//   })
-// );
-
 app.use(
   helmet({
     contentSecurityPolicy: {
@@ -59,7 +41,11 @@ app.use(
         // Allow fonts from Google Fonts and self
         fontSrc: ["'self'", 'https://fonts.gstatic.com'],
         // Allow connections to the S3 bucket
-        connectSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
+        connectSrc: ["'self'",
+           'https://apt-media-video.s3.eu-north-1.amazonaws.com',
+           process.env.FRONTEND_URL || 'http://localhost:5173',
+          'https://www.aptelecommunication.co.uk',
+        ],
       },
     },
   })
