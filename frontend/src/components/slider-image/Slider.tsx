@@ -20,7 +20,7 @@ const Slider: React.FC = () => {
   return (
     <div className={styles.home}>
       <div className={styles.background}
-        style={{ backgroundImage: 'url(/public/images/join.jpg)', backgroundPosition: 'var(--background-position)' }}
+        style={{ backgroundPosition: 'var(--background-position)' }}
       >
         <div className={styles.overlay}>
           <div className={styles.title}>

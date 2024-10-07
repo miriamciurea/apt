@@ -22,21 +22,49 @@ const corsOptions: CorsOptions = {
 // Add security headers to requests using Helmet
 // app.use(helmet());
 
+// app.use(
+//   helmet({
+//     contentSecurityPolicy: {
+//       directives: {
+//         defaultSrc: ["'self'"],
+//         mediaSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow your S3 bucket
+//         scriptSrc: ["'self'", "'unsafe-inline'"],
+//         styleSrc: ["'self'", "'unsafe-inline'"],
+//         imgSrc: ["'self'", 'data:', 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow images from S3
+//         connectSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow connections to S3
+//         fontSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
+//       },
+//     },
+//   })
+// );
+
 app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
+        // Allow only your own domain and the S3 bucket
         defaultSrc: ["'self'"],
-        mediaSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow your S3 bucket
-        scriptSrc: ["'self'", "'unsafe-inline'"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: ["'self'", 'data:', 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow images from S3
-        connectSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'], // Allow connections to S3
-        fontSrc: ["'self'", 'https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
+        // Allow media (video/audio) from S3 bucket
+        mediaSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
+        // Allow inline scripts and scripts from 'self'
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"], // Include 'unsafe-inline' for script tag if needed
+        // Allow inline styles, Google Fonts, and self-hosted styles
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          'https://fonts.googleapis.com', // Allow Google Fonts
+        ],
+        // Allow images from S3 bucket and self
+        imgSrc: ["'self'", 'data:', 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
+        // Allow fonts from Google Fonts and self
+        fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+        // Allow connections to the S3 bucket
+        connectSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
       },
     },
   })
 );
+
 
 // Enable response compression using Compression middleware
 // app.use(compression());
