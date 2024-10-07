@@ -1,12 +1,14 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors, { CorsOptions } from 'cors';
 import dotenv from 'dotenv';
-import contactRoutes from './routes/contact';
+import contactRoutes from './routes/contact';  // Use import instead of require
 import helmet from 'helmet';
+// import compression from 'compression';
 import path from 'path';
 
 dotenv.config();
 
+// deployment
 const app = express();
 
 // Define the CORS options
@@ -22,42 +24,68 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
+        // Allow only your own domain and the S3 bucket
         defaultSrc: ["'self'"],
-        scriptSrc: [
-          "'self'",
-          "'unsafe-inline'", // Allow inline scripts
-          "'unsafe-eval'", // Allow eval (if necessary)
-          'https://cdnjs.cloudflare.com', // Allow Font Awesome
-          'https://kit.fontawesome.com', // Allow Font Awesome Kit (if used)
-        ],
+        // Allow media (video/audio) from S3 bucket
+        mediaSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
+        // Allow inline scripts and scripts from 'self'
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"], // Include 'unsafe-inline' for script tag if needed
+        // Allow inline styles, Google Fonts, and self-hosted styles
         styleSrc: [
           "'self'",
-          "'unsafe-inline'", // Allow inline styles
+          "'unsafe-inline'",
           'https://fonts.googleapis.com', // Allow Google Fonts
         ],
-        imgSrc: [
-          "'self'",
-          'data:',
-          'https://apt-media-video.s3.eu-north-1.amazonaws.com',
-          'https://your_image_source.com', // Add any other image sources if necessary
-        ],
-        fontSrc: [
-          "'self'",
-          'https://fonts.gstatic.com', // Allow Google Fonts
-        ],
-        connectSrc: [
-          "'self'",
-          'https://apt-media-video.s3.eu-north-1.amazonaws.com',
-          process.env.FRONTEND_URL || 'http://localhost:5173',
+        // Allow images from S3 bucket and self
+        imgSrc: ["'self'", 'data:', 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
+        // Allow fonts from Google Fonts and self
+        fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+        // Allow connections to the S3 bucket
+        connectSrc: ["'self'",
+           'https://apt-media-video.s3.eu-north-1.amazonaws.com',
+           process.env.FRONTEND_URL || 'http://localhost:5173',
+          'https://www.aptelecommunication.co.uk',
         ],
       },
     },
   })
 );
 
-// Other middleware and route definitions...
 
-// Start the server
+// Enable response compression using Compression middleware
+// app.use(compression());
+
+// Use CORS with the options
+app.use(cors(corsOptions));
+
+// Enable preflight requests for all routes (OPTIONS method)
+app.options('*', cors(corsOptions));
+
+// Middleware to parse incoming JSON requests
+app.use(express.json());
+
+// Serve static files from the React frontend app
+// app.use(express.static(path.join(__dirname, '../../frontend/dist')));
+
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../../frontend/dist', 'index.html'));
+// });
+
+app.use(express.static(path.join(__dirname, '../../frontend/dist')));
+// dist/backend/src/index.js
+// '/Users/miriamciurea/code/miriamciurea/apt/dist/frontend/index.html'
+
+
+// node backend/dist/index.js"
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
+});
+
+// Use the contact form routes
+app.use('/api', contactRoutes);
+
+// Add app.listen to start the server
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
