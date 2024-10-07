@@ -40,12 +40,13 @@ app.use(
         styleSrc: [
           "'self'",
           "'unsafe-inline'",
-          'https://fonts.googleapis.com', // Allow Google Fonts
+          'https://fonts.googleapis.com',
+          'https://cdnjs.cloudflare.com',
         ],
         // Allow images from S3 bucket and self
         imgSrc: ["'self'", 'data:', 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
         // Allow fonts from Google Fonts and self
-        fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+        fontSrc: ["'self'", 'https://fonts.gstatic.com', 'https://cdnjs.cloudflare.com',],
         // Allow connections to the S3 bucket
         connectSrc: ["'self'",
            'https://apt-media-video.s3.eu-north-1.amazonaws.com',
