@@ -35,7 +35,6 @@
   margin-left: 1.5rem;
 }
 
-/* New Button Style */
 .navLink {
   display: inline-block;
   padding: 10px 20px;
@@ -60,13 +59,6 @@
   text-align: center;
   text-transform: uppercase;
   color: inherit;
-}
-
-/* Hiding unnecessary elements from the previous design */
-.circle,
-.icon,
-.arrow {
-  display: none;
 }
 
 /* Mobile menu icon */
@@ -107,9 +99,9 @@
     width: 100%;
   }
 
-    .navLink {
-      width: 90%;
-      padding: 15px;
-      text-align: center;
-    }
+  .navLink {
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+  }
 }
