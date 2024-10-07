@@ -29,7 +29,13 @@ app.use(
         // Allow media (video/audio) from S3 bucket
         mediaSrc: ["'self'", 'https://apt-media-video.s3.eu-north-1.amazonaws.com'],
         // Allow inline scripts and scripts from 'self'
-        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"], // Include 'unsafe-inline' for script tag if needed
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'", // Allow inline scripts
+          "'unsafe-eval'", // Allow eval (if necessary)
+          'https://cdnjs.cloudflare.com', // Allow Font Awesome
+          'https://kit.fontawesome.com', // Allow Font Awesome Kit (if used)
+        ], // Include 'unsafe-inline' for script tag if needed
         // Allow inline styles, Google Fonts, and self-hosted styles
         styleSrc: [
           "'self'",
