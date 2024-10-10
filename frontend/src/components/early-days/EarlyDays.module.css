@@ -1,5 +1,11 @@
 .container img {
   width: 100%;
+  height: auto;
+  /* Maintain the aspect ratio of images */
+  filter: grayscale(100%) !important;
+  /* Apply grayscale */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  /* Smooth transition for transform and filter */
 }
 
 .container {
@@ -13,24 +19,21 @@
   grid-template-columns: 1fr 1fr;
   height: auto;
   justify-content: center;
-
 }
 
 .contentItem1 {
   text-align: left;
-  /* width: 50%; */
 }
 
 .contentItem2 {
   text-align: right;
-  /* width: 50%; */
   justify-self: end;
 }
 
 .photoImage {
-  height: 700px;
+  height: 400px;
+  /* Adjust the height for a better layout */
 }
-
 
 .photo1 {
   display: flex;
@@ -38,7 +41,6 @@
   justify-content: end;
   align-items: end;
   margin-top: 10px;
-
 }
 
 .photo2 {
@@ -51,12 +53,30 @@
   font-size: 2rem;
 }
 
+.photoImage:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge the image */
+  filter: grayscale(0%) !important;
+  /* Remove grayscale effect on hover */
+}
+
 @media (max-width: 560px) {
   .content {
-    grid-template-columns: none;
+    grid-template-columns: 1fr;
+    /* Use single column layout on smaller screens */
+    text-align: center;
   }
 
-  .photo2 img {
+  .contentItem1,
+  .contentItem2 {
+    text-align: center;
+    justify-self: center;
+    /* Center the content */
+  }
+
+  .photo2 img,
+  .photo1 img {
     width: 100%;
+    height: auto;
   }
 }

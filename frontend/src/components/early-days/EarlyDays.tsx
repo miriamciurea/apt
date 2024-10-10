@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './EarlyDays.module.css';
-import h1 from '/public/images/h1.jpeg'; // Import local images
+import b2 from '/public/images/b2.jpeg'; // Import local images
 import h2 from '/public/images/h2.jpeg';
 import h3 from '/public/images/h3.jpeg';
 import h4 from '/public/images/h4.jpeg';
@@ -25,9 +25,13 @@ const EarlyDays: React.FC = () => {
             <div className={styles.photo1}>
               <div>
                 <img
-                  src={h1} // Swapped this to h3.jpeg
+                  src={b2} // Swapped this to h3.jpeg
                   alt="Construction Site"
                   className="photoImage"
+                                    style={{
+                    height: '300px',
+                    width: 'auto'
+                  }}
                 />
               </div>
 
@@ -39,7 +43,7 @@ const EarlyDays: React.FC = () => {
                 />
 
                 <img
-                  src={h4} // Swapped this to h1.jpeg
+                  src={h4} // Swapped this to b2.jpeg
                   alt="Construction"
                   className="photoImage"
                   style={{
