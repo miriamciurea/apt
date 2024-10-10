@@ -14,8 +14,7 @@ const Footer: React.FC = () => {
         <div className={styles.about}>
           <div className={styles.title}>Who We Are</div>
           <div>
-            APT is a construction agency that specializes in rail, civil and
-            optic fibre, located in Midlands, United Kingdom.
+            APT is a company  that specializes in civil-rail and utilities, located in Midlessex, United Kingdom.
           </div>
           <div className={styles.copyright}>
             <Link to="/copyright">Copyright</Link>
