@@ -43,15 +43,12 @@
   padding: 0;
   /* Remove padding */
   transition: color 0.3s;
-  /* Smooth transition */
+  font-size: medium;
+  font-weight: 700;
 }
 
 .homeButton:hover {
-  color: #007bff;
-  /* Change color on hover (customize as needed) */
-  text-decoration: underline;
-  /* Optional: Add underline on hover */
-  font-size: 1rem;
+  color: #007AFF;
 }
 
 
