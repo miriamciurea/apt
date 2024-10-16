@@ -271,6 +271,7 @@ const ContactForm = () => {
 
     if (!formErrors.name && !formErrors.email && !formErrors.phone) {
       try {
+        // const response = await fetch(`https://localhost:5001/api/getintouch`, {
         const response = await fetch(`https://www.aptelecommunication.co.uk/api/getintouch`, {
           method: "POST",
           headers: {
