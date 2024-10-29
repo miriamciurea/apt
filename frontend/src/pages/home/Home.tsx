@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../../components/navbar/Hero";
-import Reviews from "../../components/reviews/Reviews";
 import HomeProjects from "../../components/home-projects/HomeProjects";
 import Slider from "../../components/slider-image/Slider";
 import Loop from "../../components/loop/Loop";
@@ -18,7 +17,6 @@ const Home: React.FC = () => {
         <Loop />
         <Slider />
         <CompanyValues />
-        <Reviews />
         <Cta />
       </div>
     </>
