@@ -59,7 +59,7 @@ footer {
 }
 
 .iconstyles span {
-  font-size: 25px;
+  font-size: 15px;
   color: var(--blue);
 }
 
@@ -82,7 +82,9 @@ footer {
     grid-template-rows: auto; /* Let rows size automatically */
     grid-template-areas:
       "logo about"
-      "pages git"; /* Define the order of items */
+      "pages git";
+      /* "about git"
+      "pages logo "; */
       padding: 0px 10%;
   }
 

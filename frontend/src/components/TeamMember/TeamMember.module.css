@@ -1,5 +1,5 @@
 .teamMember {
-    background-color: #e0e0e0;
+    background-color: var(--white);
     border-radius: 10px;
     width: 300px;
     padding: 20px;
