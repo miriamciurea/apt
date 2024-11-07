@@ -32,6 +32,17 @@ const Footer: React.FC = () => {
 
               <div>
                 582 Honeypot Lane, HA7 1JS
+                {/* <br /> Unity House Westwood Park, Wigan, Great Manchester, WN3 */}
+              </div>
+            </div>
+
+            <div className={styles.git_component}>
+              <div className={styles.iconstyles}>
+                <span className="material-symbols-outlined">location_on</span>
+              </div>
+
+              <div>
+                Unity House Westwood Park, Wigan WN3 4HE, UK
               </div>
             </div>
 

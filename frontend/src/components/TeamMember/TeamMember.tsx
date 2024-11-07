@@ -7,10 +7,11 @@ type TeamMemberProps = {
   alt: string;
 };
 
-const TeamMember = ({ imageSource, name, role, alt }: TeamMemberProps) => {
+// const TeamMember = ({ imageSource, name, role, alt }: TeamMemberProps) => {
+  const TeamMember = ({ name, role, }: TeamMemberProps) => {
   return (
     <div className={styles.teamMember}>
-      <img src={imageSource} alt={alt} className={styles.teamImage} />
+      {/* <img src={imageSource} alt={alt} className={styles.teamImage} /> */}
       <h2 className={styles.teamName}>{name}</h2>
       <p className={styles.teamRole}>{role}</p>
     </div>

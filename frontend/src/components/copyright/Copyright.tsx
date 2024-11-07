@@ -23,7 +23,7 @@ const Copyright: React.FC = () => {
           <p><strong>Country</strong> refers to: United Kingdom</p>
         </li>
         <li>
-          <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AP Telecommunications Limited, Devonshire House 582 Honeypot Lane, Stanmore, HA7 1JS.</p>
+          <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AP Telecommunications Limited, with offices at Devonshire House, 582 Honeypot Lane, Stanmore, HA7 1JS and Unity House, Westwood Park, Wigan, Greater Manchester, WN3.</p>
         </li>
         <li>
           <p><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone, or a digital tablet.</p>
