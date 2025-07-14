@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
-import styles from './HomeProjects.module.css'; // Adjust path as necessary
+import styles from './HomeProjects.module.css';
 
 const HomeProjects: React.FC = () => {
   // New projects from JSON data (first 5)
   const newProjects = [
     {
-      src: "/images/lof2.JPG", // Assuming you're hosting your images
+      src: "/images/lof02.JPG", // Assuming you're hosting your images
       alt: "Lowestoft Fibre Network",
       info: "Fibre Network | Lowestoft, UK"
     },
