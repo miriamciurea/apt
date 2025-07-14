@@ -33,6 +33,7 @@ const Projects = () => {
         setCurrentIndex(0);
     };
     const handleNext = () => {
+      if (filteredProjects.length === 0) return;
         // Start the "exit" animation
         setAnimationClass('animate__animated animate__backOutDown');
         // Wait for the animation to complete before changing the project
@@ -42,6 +43,7 @@ const Projects = () => {
         }, 500); // Adjust the timeout to match the animation duration
     };
     const handlePrev = () => {
+      if (filteredProjects.length === 0) return;
         // Start the "exit" animation
         setAnimationClass('animate__animated animate__backOutDown');
         // Wait for the animation to complete before changing the project
