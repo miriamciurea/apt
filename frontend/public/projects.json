@@ -1,7 +1,25 @@
 
 [
+
   {
-  "id": 1,
+    "id": 1,
+    "name": "FTN–GSM‑R National Rail Project",
+    "description": "Between 2006 and 2016, our team played a key role in delivering critical infrastructure for the UK’s Fixed Telecoms Network (FTN) and GSM‑R (Global System for Mobile Communications – Railways) — the secure digital communication platform used by Network Rail.\n\nScope of Work:\n- Installation of 8m to 25m telecom masts across nationwide rail corridors\n- Delivery and positioning of REBs (Relocatable Equipment Buildings)\n- Civil works including foundations, ducting, cable trays, and grounding\n- Support for FTN fibre backhaul & GSM‑R base station integration\n\nOur contribution helped modernise the UK rail network’s communication systems — enabling safer, faster, and more efficient railway operations through digital connectivity and direct driver-to-signalman communication.",
+    "location": "Nationwide, UK",
+    "completionDate": "2016-12-01",
+    "sector": "Rail Telecom",
+    "value": "N/A",
+    "customerOrganisation": {
+    "name": "MC Nicholas Construction / Alan Dick Communications"
+    },
+    "photos": [
+      "/images/lof1.JPG",
+      "/images/lof2.JPG"
+    ]
+  },
+
+  {
+  "id": 2,
   "name":" Lowestoft Fibre Network",
   "description": "This project involved a Fibre to the Home (FTTH) network, covering 30,000 homes with both underground and overhead installations serviced via the Fibre Exchange.\n\nScope of Work:\n- Installation and excavation of public highways, footways, and private land.\n- Installation of fibre optic cables in new and existing highways.\n- Ductwork and cable installations in public and private buildings.\n- Street cabinet installations and overhead pole access.\n\nPod-Trak focused on risk control by updating the Project Hazard Register, ensuring high-quality delivery with an excellent Health & Safety record. Close engagement with the local authority helped minimize disruption to the public and businesses.\n\nKey Stats:\n- Excavation of 180,000m of track.\n- Delivered on time and within budget, leading to another major project award.",
   "location": "Lowestoft, UK",
@@ -25,7 +43,7 @@
 
 
   {
-  "id": 2,
+  "id": 3,
   "name": "NWEP Phase 3 Cable Containment",
   "description": "APT were contracted to install 15km of cable containment throughout the North West Electrification phase 4 project.\n\nScope of Work:\n- Installation of raised GRP troughing.\n- Wall-tied tunnel and bridge containment.\n- TTS ground-laid troughing.\n\nThe majority of the works were completed during short night-time possessions, with our in-house road rail plant delivering materials across the project site. Our team worked in strict adherence to Health & Safety regulations, ensuring a safe environment for all. Programming and planning large teams and equipment was essential in completing the project on time and within budget.\n\nKey Stats:\n- 15km of cable containment installed.\n- Delivered within the budget.\n- Project completed on time between July 2017 and October 2018.",
   "location": "Manchester – Euxton Jcn",
@@ -42,7 +60,7 @@
 },
 
 {
-  "id": 3,
+  "id": 4,
   "name": "North West Electrification Boundary Fencing",
   "description": "Pod-Trak were contracted to install over 3km of palisade boundary fencing as part of the North West Electrification Phase 3 project.\n\nScope of Work:\n- Installation of 1.8m high palisade fencing along the Network Rail boundary.\n- Works conducted in stages between Blackpool and Preston during the completion of the North West Electrification project.\n- Use of rope access in challenging locations to install fencing at height.\n- Materials were delivered throughout the route using our in-house plant.\n\nKey Achievements:\n- Strict adherence to Health & Safety regulations, ensuring a safe environment for both workers and the public.\n- Project completed within budget and on time, between February 2018 and January 2019.",
   "location": "Blackpool - Preston",
@@ -58,7 +76,7 @@
   ]
 },
 {
-  "id": 4,
+  "id": 5,
   "name": "Switching Access and Stairways",
   "description": "APT was contracted to complete the installation of safe access to allow staff to reach overhead line switching equipment across the North West Electrification Phase 3 and 4 projects.\n\nScope of Work:\n- Construction of access stairways and walkways throughout the NWEP, providing seamless and secure access to critical switching points between Blackpool and Manchester.\n- All works were carried out midweek, minimizing disruption to rail services and ensuring continuous project flow.\n- Use of bespoke construction techniques, allowing our teams to safely navigate and install in complex rail environments.\n\nKey Achievements:\n- Delivered within a tight timeframe from July 2018 to December 2018, meeting all project milestones.\n- Rigorous adherence to Health & Safety regulations ensured a zero-incident project, further strengthening our reputation for safe, efficient project delivery.\n- The project was completed on budget at £300k, showcasing our commitment to cost-effective solutions.\n\nAPT’s ability to work in challenging environments, coupled with the satisfaction of the project’s completion, resulted in positive feedback and paved the way for further opportunities.",
   "location": "Blackpool & Manchester",
@@ -73,7 +91,7 @@
   ]
 },
 {
-  "id": 5,
+  "id": 6,
   "name": "Blackpool Lighting Walkway",
   "description": "APT was contracted to complete the installation of a lighting walkway in Blackpool. The project involved providing safe, well-lit access to critical areas of the railway infrastructure.\n\nScope of Work:\n- Installation of energy-efficient lighting along key pathways, ensuring safety and accessibility for staff and passengers.\n- All work was performed during tight night-time schedules to avoid disruption to railway operations.\n- The project involved bespoke construction techniques to navigate complex rail environments and install lighting fixtures safely and securely.\n\nKey Achievements:\n- Delivered on time and within budget, with the project completed between June 2019 and October 2019.\n- Strict adherence to Health & Safety regulations, resulting in a zero-incident project.\n\nAPT’s ability to deliver in challenging environments, coupled with a strong commitment to Health & Safety, made this project a success and strengthened our partnership with the client.",
   "location": "Blackpool",
