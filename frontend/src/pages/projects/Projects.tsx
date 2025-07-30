@@ -46,6 +46,7 @@ const Projects: React.FC = () => {
   };
 
   const handleNext = () => {
+    if (filteredProjects.length === 0) return;
     // Start the "exit" animation
     setAnimationClass('animate__animated animate__backOutDown');
 
@@ -57,6 +58,7 @@ const Projects: React.FC = () => {
   };
 
   const handlePrev = () => {
+    if (filteredProjects.length === 0) return;
     // Start the "exit" animation
     setAnimationClass('animate__animated animate__backOutDown');
 
