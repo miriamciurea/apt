@@ -77,14 +77,16 @@ app.use(express.json());
 //   res.sendFile(path.join(__dirname, '../../frontend/dist', 'index.html'));
 // });
 
-// app.use(express.static(path.join(__dirname, '../../frontend/dist'))); //prod
-app.use(express.static(path.join(__dirname, '../../frontend/'))); //dev
+let correct_path = process.env.NODE_ENV === 'development' ? '../../frontend/' : '../../frontend/dist';
+
+app.use(express.static(path.join(__dirname, correct_path)));
 
 app.use('/api', contactRoutes);
 
+let correct_path2 = process.env.NODE_ENV === 'development' ? '../../frontend/index.html' : '../../frontend/dist/index.html';
+
 app.get('*', (req, res) => {
-  // res.sendFile(path.join(__dirname, '../../frontend/dist/index.html')); //prod
-  res.sendFile(path.join(__dirname, '../../frontend/index.html')); //dev
+  res.sendFile(path.join(__dirname, correct_path2));
 });
 
 
