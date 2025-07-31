@@ -26,7 +26,7 @@ const SendCVForm = () => {
     formData.append("cv", cv);
 
     try {
-      const response = await fetch('http://localhost:5001/api/sendcv', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/sendcv`, {
         method: 'POST',
         body: formData,  // Pass the form data directly
       });

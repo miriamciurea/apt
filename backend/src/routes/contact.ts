@@ -5,28 +5,10 @@ import sendCvEmail from '../brevoServiceCV';
 
 const router = Router();
 
-// Define the POST route for contact form submission
-// router.post('/getintouch', async (req: Request, res: Response, next: NextFunction) => {
-//   const formData = req.body;
-
-//   // Validate required fields
-//   if (!formData.name || !formData.email || !formData.phone) {
-//     return res.status(400).json({ error: 'Name, email, and phone are required.' });
-//   }
-
-//   try {
-//     // Call the email sending service
-//     await sendContactEmail(formData);
-//     res.status(200).json({ message: 'Form submitted successfully, email sent.' });
-//   } catch (error) {
-//     console.error('Error:', error);
-//     res.status(500).json({ error: 'Internal Server Error, email not sent.' });
-//   }
-// });
-
 
 router.post('/getintouch', async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   const formData = req.body;
+  // console.log("formdata backend:", formData);
 
   // Validate required fields
   if (!formData.name || !formData.email || !formData.phone) {
@@ -47,32 +29,10 @@ router.post('/getintouch', async (req: Request, res: Response, next: NextFunctio
 ////////////////////////////////////////////////////////////
 
 
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
+// const storage = multer.memoryStorage();
+// const upload = multer({ storage });
 
-
-// Define the route to handle the CV submission
-// router.post('/sendcv', upload.single('cv'), async (req: Request, res: Response) => {
-//   const { name, email } = req.body;
-//   const cv = req.file;  // This will contain the uploaded file
-
-//   if (!cv) {
-//     return res.status(400).json({ error: 'CV file is required.' });
-//   }
-
-//   try {
-//     // Log file info for debugging
-//     console.log('Received form data:', { name, email });
-//     console.log('File information:', req.file);
-
-//     // Call your function to send the email with the CV as an attachment
-//     await sendCvEmail({ name, email, cv });
-//     res.status(200).json({ message: 'CV sent successfully.' });
-//   } catch (error) {
-//     console.error('Error sending CV:', error);
-//     res.status(500).json({ error: 'Internal Server Error, CV not sent.' });
-//   }
-// });
+const upload = multer();
 
 router.post('/sendcv', upload.single('cv'), async (req: Request, res: Response): Promise<void> => {
   const { name, email } = req.body;
@@ -85,8 +45,8 @@ router.post('/sendcv', upload.single('cv'), async (req: Request, res: Response):
 
   try {
     // Log file info for debugging
-    console.log('Received form data:', { name, email });
-    console.log('File information:', req.file);
+    // console.log('Received form data:', { name, email });
+    // console.log('File information:', req.file);
 
     // Call your function to send the email with the CV as an attachment
     await sendCvEmail({ name, email, cv });

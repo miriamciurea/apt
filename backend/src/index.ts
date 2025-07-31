@@ -11,10 +11,9 @@ dotenv.config();
 // deployment
 const app = express();
 
-// Define the CORS options
 const corsOptions: CorsOptions = {
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
-  methods: ['GET', 'POST'],
+  origin: process.env.FRONTEND_URL,
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   credentials: true,
 };
@@ -50,8 +49,8 @@ app.use(
         // Allow connections to the S3 bucket
         connectSrc: ["'self'",
            'https://apt-media-video.s3.eu-north-1.amazonaws.com',
-           process.env.FRONTEND_URL || 'http://localhost:5173',
-          'https://www.aptelecommunication.co.uk',
+          process.env.FRONTEND_URL || 'http://localhost:5173',
+           process.env.BACKEND_URL || 'http://localhost:5001',
         ],
       },
     },
@@ -78,19 +77,16 @@ app.use(express.json());
 //   res.sendFile(path.join(__dirname, '../../frontend/dist', 'index.html'));
 // });
 
-app.use(express.static(path.join(__dirname, '../../frontend/dist')));
-// dist/backend/src/index.js
-// '/Users/miriamciurea/code/miriamciurea/apt/dist/frontend/index.html'
+// app.use(express.static(path.join(__dirname, '../../frontend/dist'))); //prod
+app.use(express.static(path.join(__dirname, '../../frontend/'))); //dev
 
-
-// node backend/dist/index.js"
+app.use('/api', contactRoutes);
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
+  // res.sendFile(path.join(__dirname, '../../frontend/dist/index.html')); //prod
+  res.sendFile(path.join(__dirname, '../../frontend/index.html')); //dev
 });
 
-// Use the contact form routes
-app.use('/api', contactRoutes);
 
 // Add app.listen to start the server
 const PORT = process.env.PORT || 5001;

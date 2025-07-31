@@ -23,7 +23,7 @@ const CareersFirstSection: React.FC = () => {
           <div>
             {items.map((item) => {
               return (
-                <div className={styles.agCoursesItem}>
+                <div className={styles.agCoursesItem} key={item.name}>
                   <div className={styles.agCoursesItemLink}>
                     <div className={styles.agCoursesItemBg}></div>
 

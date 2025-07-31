@@ -11,8 +11,11 @@ const sendContactEmail = async (formData: any) => {
   const apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
-  sendSmtpEmail.to = [{ email: 'adrianpearson@apt.info' }];
-  sendSmtpEmail.sender = { email: 'adrianpearson@apt.info', name: 'APT' };
+
+  sendSmtpEmail.to = [{ email: process.env.BREVO_TO }];
+  sendSmtpEmail.sender = { email: process.env.BREVO_TO, name: 'IT Support' };
+
+
   sendSmtpEmail.subject = `New Contact Form Submission from ${formData.name}`;
   sendSmtpEmail.textContent = `
     You have received a new contact form submission.
