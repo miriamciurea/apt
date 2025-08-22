@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './Projects.module.css';
 import Hero from './hero/Hero';
 import 'animate.css';
@@ -20,13 +21,22 @@ const Projects: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [animationClass, setAnimationClass] = useState<string>(''); // State to manage animation class
 
+   const navigate = useNavigate();
+
   useEffect(() => {
     fetch('/projects.json')
       .then(response => response.json())
       .then(data => {
         setProjects(data);
         setFilteredProjects(data);
+
+        const savedIndex = localStorage.getItem("lastSelectedProject");
+        if (savedIndex !== null) {
+          setCurrentIndex(Number(savedIndex));
+        }
+      
       })
+
       .catch(error => console.error('Error fetching projects:', error));
   }, []);
 
@@ -67,6 +77,12 @@ const Projects: React.FC = () => {
       setCurrentIndex((prevIndex) => (prevIndex - 1 + filteredProjects.length) % filteredProjects.length);
       setAnimationClass('animate__animated animate__backInDown'); // Start the "enter" animation
     }, 500); // Adjust the timeout to match the animation duration
+  };
+
+  // 🔹 funcție pentru butonul "view project"
+  const handleViewProject = (id: number, index: number) => {
+    localStorage.setItem("lastSelectedProject", index.toString());
+    navigate(`/projects/${id}`);
   };
 
   const currentProject = filteredProjects[currentIndex];
@@ -116,9 +132,10 @@ const Projects: React.FC = () => {
                 {currentIndex + 1} / {filteredProjects.length}
               </div>
 
-              <Link to={`/projects/${currentProject.id}`} className={styles.readMoreButton}>
-                view project
-              </Link>
+              <Link to={`/projects/${currentProject.id}`}
+                onClick={() => localStorage.setItem("lastSelectedProject", currentIndex.toString())}
+                className={styles.readMoreButton}
+              > View Project </Link>
 
               <div className={styles.navigation}>
                 <button onClick={handlePrev}>

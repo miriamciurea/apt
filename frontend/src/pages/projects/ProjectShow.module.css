@@ -297,4 +297,28 @@ h1 {
   right: 20px;
 }
 
+.prevButton {
+  border: 1px solid blue;
+}
 
+.prevButton:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.1);
+
+}
+
+.nextButton {
+  border: 1px solid blue;
+}
+
+.nextButton:hover {
+   transition: transform 0.5s ease;
+  transform: scale(1.1);
+}
+
+.navigationButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
