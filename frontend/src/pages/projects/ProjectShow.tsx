@@ -33,6 +33,11 @@ const ProjectShow: React.FC = () => {
       .catch((error) => console.error('Error fetching project:', error));
   }, [id]);
 
+  // Scroll up pentru fiecare proiect
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" }); 
+}, [id]);
+
   // Navigare între proiecte
   const handleNavigateProject = (direction: 'prev' | 'next') => {
     if (!project || projects.length === 0) return;
@@ -91,7 +96,7 @@ const ProjectShow: React.FC = () => {
   return (
     <div className={styles.container}>
       {/* Butoane Prev / Next */}
-      <div className={styles.navigationButtons}>
+       <div className={styles.navigationButtons}>
         <button onClick={() => handleNavigateProject('prev')} className={styles.prevButton}>Prev Project</button>
         <button onClick={() => handleNavigateProject('next')} className={styles.nextButton}>Next Project</button>
       </div>

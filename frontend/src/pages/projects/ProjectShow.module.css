@@ -297,8 +297,26 @@ h1 {
   right: 20px;
 }
 
+.navigationButtons {
+  position: fixed;
+  bottom: 1px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between; /* 🔥 stânga și dreapta */
+  transform: translateY(-50%);
+  padding: 25px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
 .prevButton {
   border: 1px solid blue;
+  width: fit-content;
+  border-radius: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: transparent;
+  
 }
 
 .prevButton:hover {
@@ -309,16 +327,14 @@ h1 {
 
 .nextButton {
   border: 1px solid blue;
+  width: fit-content;
+  border-radius: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: transparent;
 }
 
 .nextButton:hover {
-   transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
   transform: scale(1.1);
-}
-
-.navigationButtons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
 }
